@@ -1,0 +1,141 @@
+.login {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+.login > svg.red {
+  fill: #D22E1E;
+  stroke: #D22E1E;
+}
+.login > svg.blue {
+  fill: #004879;
+  stroke: #004879;
+}
+.login > svg.bottomLeft {
+  position: absolute;
+  bottom: 0px;
+}
+.login > svg.bottomRight {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+}
+.login > section {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  place-content: flex-start center;
+}
+.login > section > section {
+  text-align: center;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  display: grid;
+}
+.login > section > section > div {
+  flex: 1;
+  min-width: 275px;
+  width: 20vw;
+}
+.login > section > section > div:last-of-type {
+  margin-top: 4rem;
+  color: #004879;
+}
+.login > section > section > div:last-of-type > button {
+  background-color: #D22E1E;
+  color: #FFFFFF;
+  border: 0px;
+  width: 100%;
+  padding: 1rem 0rem;
+  border-radius: 5px;
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 0.1ch;
+  border: solid 1px #D22E1E;
+  transition: all ease-out 0.2s;
+}
+.login > section > section > div:last-of-type > button:hover {
+  background-color: #FFFFFF;
+  color: #D22E1E;
+}
+.login > section > section > div:last-of-type > h3 {
+  position: relative;
+  overflow: hidden;
+}
+.login > section > section > div:last-of-type > h3::after {
+  position: absolute;
+  content: "";
+  padding: 2px 42.5%;
+  left: 7.5%;
+  bottom: -10%;
+  background-color: #FFFFFF;
+}
+.login > section > section > div:last-of-type > h3:hover::after {
+  background-color: #004879;
+}
+.login > section > section > div > div {
+  display: flex;
+  padding: 1rem 0rem;
+  width: 100%;
+}
+.login > section > section > div > div > input {
+  flex: 5;
+  padding: 1rem;
+  border-radius: 5px 0px 0px 5px;
+  font-size: 1.25rem;
+  color: #D22E1E;
+  border: solid 1px #004879;
+}
+.login > section > section > div > div > input::placeholder {
+  color: #D22E1E;
+  text-align: left;
+  vertical-align: middle;
+  font-size: 1.25rem;
+}
+.login > section > section > div > div > input :-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #D22E1E;
+  text-align: left;
+  vertical-align: middle;
+  font-size: 1.25rem;
+}
+.login > section > section > div > div > input ::-ms-input-placeholder { /* Microsoft Edge */
+  color: #D22E1E;
+  text-align: left;
+  vertical-align: middle;
+  font-size: 1.25rem;
+}
+.login > section > section > div > div > div {
+  background-color: #D22E1E;
+  transform: translateX(-2px);
+  flex: 1;
+  display: grid;
+  border-radius: 0px 5px 5px 0px;
+  place-items: center;
+  border: solid 1px #004879;
+  transition: all ease-out 0.2s;
+}
+.login > section > section > div > div > div:hover {
+  background-color: #FFFFFF;
+}
+.login > section > section > div > div > div:hover > svg {
+  fill: #D22E1E;
+  stroke: #D22E1E;
+}
+.login > section > section > div > h1 {
+  font-size: 3.25rem;
+  color: #D22E1E;
+  margin-top: 12rem;
+  margin-bottom: 2rem;
+}
+.login > section > section > div > h1 > span {
+  color: #004879;
+}
+
+
+/*# sourceMappingURL=login.css.map */
