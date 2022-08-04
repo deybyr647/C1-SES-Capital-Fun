@@ -3,15 +3,26 @@
 
 .template {
   max-width: 100vw;
+  // width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: row;
+  position: static;
 }
 
 .navbar {
-  position: relative;
+  position: sticky;
+  left: 0;
+  top: 0;
   background: $secondary-color;
-  width: 20rem;
-  min-height: 100vh;
+  min-height: 30rem;
+  height: 100vh;
+  flex: none;
+}
+
+.navbar-opened {
+  
+  width: 18rem;
 
   svg {
     color: white;
@@ -65,9 +76,7 @@
 }
 
 .navbar-closed {
-  background: $secondary-color;
   width: 4rem;
-  min-height: 100vh;
   display: flex;
   justify-content: center;
   svg {
@@ -77,12 +86,24 @@
   }
   .top {
     padding-top: 1.5rem;
+    h2 {
+      display: none;
+    }
+  }
+
+  .links {
+    display: none;
+  }
+
+  .bottom {
+    display: none;
   }
 }
 
+.animate {
+  transition: width 0.5s;
+}
+
 .component {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
+  margin: 0 auto;
 }
