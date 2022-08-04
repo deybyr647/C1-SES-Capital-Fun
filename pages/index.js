@@ -5,6 +5,7 @@ import Template from '../components/template/Template'
 import Loader from '../components/loader/Loader'
 import HomeComp from '../components/home/Home'
 import { useEffect } from 'react'
+import Missions from '../components/missions/Missions'
 
 export default function Home() {
 
@@ -23,7 +24,7 @@ export default function Home() {
       <main>
         <Loader></Loader>
         <Template>
-          <HomeComp/>
+          <Missions/>
         </Template>
       </main>
 
