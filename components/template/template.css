@@ -39,6 +39,22 @@
   padding-left: 10%;
   display: flex;
   align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.navbar .links li::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  padding: 100rem 2px;
+  background-color: #004879;
+}
+.navbar .links li:hover {
+  background-color: #0076C4;
+}
+.navbar .links li:hover::after {
+  background-color: #D22E1E;
 }
 .navbar .bottom {
   position: absolute;
