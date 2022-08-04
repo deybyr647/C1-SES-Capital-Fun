@@ -1,0 +1,64 @@
+@import "../../styles/globalStyles.scss";
+
+.loader {
+    z-index: 100;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background-color: $secondary-color;
+    color: $primary-color;
+    left: 0;
+    top: 0;
+    display: grid;
+    place-content: center;
+    transition: all ease-out 1.5s;
+    > section { 
+        display: flex;
+        flex-direction: column;
+        > div {
+            flex: 1;
+            &:first-of-type {
+                position: relative;
+                display: grid;
+                place-items: center;
+            }
+
+            > h1 {
+                position: relative;
+                font-size: 2rem;
+                text-align: center;
+                &::before {
+                    content: " ";
+                    position: absolute;
+                    padding: 2px 4rem;
+                    right: 75%;
+                    top: calc(50% - 1px);
+                    background-color: $primary-color;
+                }
+                &::after {
+                    content: " ";
+                    position: absolute;
+                    padding: 2px 4rem;
+                    left: 75%;
+                    top: calc(50% - 1px);
+                    background-color: $primary-color;
+                }
+            }
+        }
+    }
+}
+
+svg {
+    fill: $primary-color;
+    stroke: $primary-color;
+}
+
+.inside-1 {
+    position: absolute;
+    bottom: 0;
+}
+
+.inside-2 {
+    position: absolute;
+    bottom: -100px;
+}

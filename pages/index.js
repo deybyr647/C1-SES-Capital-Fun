@@ -2,9 +2,16 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.scss'
 import Template from '../components/template/Template'
+import Loader from '../components/loader/Loader'
 import TestComponent from '../components/TestComponent'
+import { useEffect } from 'react'
 
 export default function Home() {
+
+  useEffect(() => {
+    document.getElementById("loader").style.top = "-100%";
+  }, [])
+
   return (
     <div>
       <Head>
@@ -14,8 +21,8 @@ export default function Home() {
       </Head>
 
       <main>
+        <Loader></Loader>
         <Template>
-          <TestComponent/>
         </Template>
       </main>
 
