@@ -51,7 +51,7 @@
 }
 .streak > section > section:last-of-type > button {
   height: 10vh;
-  padding: 1rem 0rem;
+  padding: 0.25rem 0rem;
   background-color: #004879;
   color: #FFFFFF;
   border: solid 3px #FFFFFF;
