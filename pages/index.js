@@ -3,7 +3,7 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.scss'
 import Template from '../components/template/Template'
 import Loader from '../components/loader/Loader'
-import TestComponent from '../components/TestComponent'
+import HomeComp from '../components/home/Home'
 import { useEffect } from 'react'
 
 export default function Home() {
@@ -23,6 +23,7 @@ export default function Home() {
       <main>
         <Loader></Loader>
         <Template>
+          <HomeComp/>
         </Template>
       </main>
 
@@ -41,3 +42,5 @@ export default function Home() {
     </div>
   )
 }
+
+
