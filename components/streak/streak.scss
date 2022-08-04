@@ -1,0 +1,29 @@
+@import '../../styles/globalStyles.scss';
+
+.streak {
+    position: absolute;
+    width: 100vw;
+    z-index: 10;
+    background-color: $secondary-color;
+    left: 0px;
+    top: 0px;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    & > section {
+        text-align: center;
+        & > h1 {
+            color: $primary-color;
+            font-size: 2rem;
+            margin: 0px;
+        }
+        & > section:first-of-type {
+            min-width: 250px;
+            margin-top: 2rem;
+            width: 75vw;
+            height: 400px;
+            border-radius: 5px;
+            border: solid 3px $primary-color;
+        }
+    }
+}

@@ -1,0 +1,29 @@
+.streak {
+  position: absolute;
+  width: 100vw;
+  z-index: 10;
+  background-color: #004879;
+  left: 0px;
+  top: 0px;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+.streak > section {
+  text-align: center;
+}
+.streak > section > h1 {
+  color: #FFFFFF;
+  font-size: 2rem;
+  margin: 0px;
+}
+.streak > section > section:first-of-type {
+  min-width: 250px;
+  margin-top: 2rem;
+  width: 75vw;
+  height: 400px;
+  border-radius: 5px;
+  border: solid 3px #FFFFFF;
+}
+
+/*# sourceMappingURL=streak.css.map */
