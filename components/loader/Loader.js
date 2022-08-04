@@ -1,6 +1,26 @@
 import React from "react";
+import { useEffect } from "react";
+
+const loaderAppear = () => {
+    document.getElementById("loader").style.top = "0%";
+}
+
+const loaderDisappear = () => {
+    document.getElementById("loader").style.top = "-200%";
+}
+
+const streakAppear = () => {
+    document.getElementById("Streak").style.top = "0px";
+}
 
 function Loader (){
+    useEffect(() => {
+        loaderDisappear();
+        setTimeout(() => {
+            streakAppear();
+        }, 200);
+    }, []);
+    
     return (
         <section className="loader" id="loader">
             <section>

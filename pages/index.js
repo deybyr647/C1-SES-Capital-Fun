@@ -6,12 +6,9 @@ import Loader from '../components/loader/Loader'
 import HomeComp from '../components/home/Home'
 import { useEffect } from 'react'
 import Missions from '../components/missions/Missions'
+import Streak from '../components/streak/Streak'
 
 export default function Home() {
-
-  useEffect(() => {
-    document.getElementById("loader").style.top = "-100%";
-  }, [])
 
   return (
     <div>
@@ -22,7 +19,8 @@ export default function Home() {
       </Head>
 
       <main>
-        <Loader></Loader>
+        <Loader></Loader> 
+        <Streak streak="1"/>
         <Template>
           <Missions/>
         </Template>
