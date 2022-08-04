@@ -9,7 +9,7 @@
   top: 0;
   display: grid;
   place-content: center;
-  transition: all ease-out 1s;
+  transition: all ease-out 1.5s;
 }
 .loader > section {
   display: flex;

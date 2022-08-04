@@ -11,7 +11,7 @@
     top: 0;
     display: grid;
     place-content: center;
-    transition: all ease-out 1s;
+    transition: all ease-out 1.5s;
     > section { 
         display: flex;
         flex-direction: column;
@@ -22,7 +22,6 @@
                 display: grid;
                 place-items: center;
             }
-
             > h1 {
                 position: relative;
                 font-size: 2rem;
