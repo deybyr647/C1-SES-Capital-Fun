@@ -8,7 +8,6 @@
 
 .navbar {
   position: sticky;
-  left: 0;
   top: 0;
   background: #004879;
   min-height: 30rem;
@@ -31,9 +30,6 @@
   list-style: none;
   padding-left: 0;
 }
-.navbar-opened a:hover {
-  color: #BFBFBF;
-}
 .navbar-opened .top {
   padding-top: 1.5rem;
   padding-left: 10%;
@@ -51,6 +47,22 @@
   padding-left: 10%;
   display: flex;
   align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.navbar-opened .links li::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  padding: 100rem 2px;
+  background-color: #004879;
+}
+.navbar-opened .links li:hover {
+  background-color: #0076C4;
+}
+.navbar-opened .links li:hover::after {
+  background-color: #D22E1E;
 }
 .navbar-opened .bottom {
   position: absolute;
@@ -63,6 +75,22 @@
   padding-left: 10%;
   display: flex;
   align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.navbar-opened .bottom div::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  padding: 100rem 2px;
+  background-color: #004879;
+}
+.navbar-opened .bottom div:hover {
+  background-color: #0076C4;
+}
+.navbar-opened .bottom div:hover::after {
+  background-color: #D22E1E;
 }
 
 .navbar-closed {
@@ -94,6 +122,7 @@
 
 .component {
   margin: 0 auto;
+  overflow-x: hidden;
 }
 
 /*# sourceMappingURL=template.css.map */
