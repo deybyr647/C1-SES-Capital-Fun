@@ -12,7 +12,7 @@
   flex: 4;
   min-width: 300px;
   display: grid;
-  place-items: flex-start center;
+  place-items: center;
 }
 .signUp > section:first-of-type > section > div {
   min-width: 275px;
@@ -20,7 +20,6 @@
 }
 .signUp > section:first-of-type > section > div:first-of-type > h1 {
   text-align: center;
-  margin-top: 14rem;
   font-size: 3rem;
   color: #D22E1E;
 }
@@ -118,7 +117,7 @@
   position: relative;
   overflow: hidden;
   display: grid;
-  place-items: flex-start center;
+  place-items: center;
 }
 .signUp > section:last-of-type > section {
   color: #FFFFFF;
@@ -128,7 +127,6 @@
   min-width: 250px;
 }
 .signUp > section:last-of-type > section > h2 {
-  padding-top: 14rem;
   font-size: 3rem;
 }
 .signUp > section:last-of-type > section > h3 {
@@ -160,4 +158,3 @@
 }
 
 /*# sourceMappingURL=signup.css.map */
-

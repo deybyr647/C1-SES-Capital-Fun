@@ -12,7 +12,7 @@
             flex: 4;
             min-width: 300px;
             display: grid;
-            place-items: flex-start center;
+            place-items: center;
             & > section {
                 & > div {
                     min-width: 275px;
@@ -20,7 +20,6 @@
                     &:first-of-type {
                         & > h1 {
                             text-align: center;
-                            margin-top: 14rem;
                             font-size: 3rem;
                             color: $accent-color;
                             & > span {
@@ -126,7 +125,7 @@
             position: relative;
             overflow: hidden;
             display: grid;
-            place-items: flex-start center;
+            place-items: center;
             & > section {
                 color: $primary-color;
                 z-index: 5;
@@ -134,7 +133,6 @@
                 width: 70%;
                 min-width: 250px;
                 & > h2 {
-                    padding-top: 14rem;
                     font-size: 3rem;
                 }
                 & > h3 {

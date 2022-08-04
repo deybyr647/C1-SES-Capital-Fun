@@ -26,7 +26,7 @@
   height: 100vh;
   width: 100vw;
   display: grid;
-  place-content: flex-start center;
+  place-content: center;
 }
 .login > section > section {
   text-align: center;
@@ -130,12 +130,10 @@
 .login > section > section > div > h1 {
   font-size: 3.25rem;
   color: #D22E1E;
-  margin-top: 12rem;
   margin-bottom: 2rem;
 }
 .login > section > section > div > h1 > span {
   color: #004879;
 }
-
 
 /*# sourceMappingURL=login.css.map */
