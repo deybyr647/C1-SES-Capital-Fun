@@ -124,6 +124,7 @@
 .component {
   margin: 0 auto;
   overflow-x: hidden;
+  width: 100%;
 }
 
 /*# sourceMappingURL=template.css.map */

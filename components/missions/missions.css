@@ -1,0 +1,84 @@
+.missions {
+  margin: 2rem auto 4rem auto;
+  width: 50rem;
+  max-width: 95%;
+  text-align: center;
+  box-shadow: 0px 10px 10px 5px rgba(0, 72, 121, 0.25);
+  padding-top: 0.5rem;
+  padding-bottom: 1.5rem;
+  height: 30rem;
+  overflow-x: auto;
+}
+.missions h1 {
+  color: #D22E1E;
+}
+.missions h3 {
+  color: #004879;
+}
+.missions > div {
+  width: 100%;
+}
+.missions ul {
+  width: 100%;
+  list-style: none;
+  padding-left: 0;
+}
+.missions ul > :not(.completed)::before {
+  content: "";
+  width: 100%;
+  height: 5px;
+  left: 0;
+  bottom: 0;
+  position: absolute;
+  background: linear-gradient(to right, #D22E1E 80%, #004879 50%);
+  border-radius: 8px;
+}
+.missions li {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  width: 40rem;
+  height: 4.5rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 7px;
+  max-width: 80%;
+  display: flex;
+  align-items: center;
+  padding-left: 2rem;
+  margin-bottom: 1rem;
+}
+.missions li .percentComplete {
+  font-size: 0.7rem;
+  font-weight: bold;
+  right: 2rem;
+  text-align: left;
+}
+.missions li .percentComplete :first-child {
+  width: 2rem;
+  color: #D22E1E;
+  position: absolute;
+  right: 1.2rem;
+  bottom: 1.4rem;
+}
+.missions li .percentComplete :nth-child(2) {
+  color: #004879;
+  position: absolute;
+  right: 1.9rem;
+  bottom: 1.4rem;
+}
+.missions li .percentComplete :last-child {
+  width: 2rem;
+  color: #004879;
+  position: absolute;
+  right: 1.2rem;
+  bottom: 0.5rem;
+}
+.missions .completed {
+  opacity: 0.7;
+  filter: grayscale(30%);
+}
+.missions .completed span {
+  right: 2rem !important;
+}
+
+/*# sourceMappingURL=missions.css.map */
