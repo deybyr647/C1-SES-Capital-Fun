@@ -1,0 +1,88 @@
+@import "../../styles/globalStyles.scss";
+
+
+.template {
+  max-width: 100vw;
+  display: flex;
+  flex-direction: row;
+}
+
+.navbar {
+  position: relative;
+  background: $secondary-color;
+  width: 20rem;
+  min-height: 100vh;
+
+  svg {
+    color: white;
+    width: 3rem;
+    height: 2rem;
+  }
+
+  h2 {
+    color: $primary-color;
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .top {
+    padding-top: 1.5rem;
+    padding-left: 10%;
+    display: flex;
+    align-items: center;
+    h2 {
+      padding: 0;
+    }
+  }
+
+  .links {
+    padding-top: 2rem;
+
+    li {
+      padding-bottom: 0.5rem;
+      padding-left: 10%;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .bottom {
+    position: absolute;
+    bottom: 1.5rem;
+    width: 100%;
+    padding-top: 1.5rem;
+    border-top: 2px solid $primary-color;
+
+    div {
+      padding-left: 10%;
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+.navbar-closed {
+  background: $secondary-color;
+  width: 4rem;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  svg {
+    color: white;
+    width: 2rem;
+    height: 2rem;
+  }
+  .top {
+    padding-top: 1.5rem;
+  }
+}
+
+.component {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
