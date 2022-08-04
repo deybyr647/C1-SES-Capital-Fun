@@ -1,0 +1,162 @@
+.signUp {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  overflow-x: hidden;
+  flex-wrap: wrap;
+}
+.signUp > section {
+  min-height: 100vh;
+}
+.signUp > section:first-of-type {
+  flex: 4;
+  min-width: 300px;
+  display: grid;
+  place-items: flex-start center;
+}
+.signUp > section:first-of-type > section > div {
+  min-width: 275px;
+  width: 25vw;
+}
+.signUp > section:first-of-type > section > div:first-of-type > h1 {
+  text-align: center;
+  margin-top: 14rem;
+  font-size: 3rem;
+  color: #D22E1E;
+}
+.signUp > section:first-of-type > section > div:first-of-type > h1 > span {
+  color: #004879;
+}
+.signUp > section:first-of-type > section > div:first-of-type > div {
+  display: flex;
+  margin-top: 1rem;
+}
+.signUp > section:first-of-type > section > div:first-of-type > div > input {
+  flex: 5;
+  padding: 1rem;
+  border-radius: 5px 0px 0px 5px;
+  font-size: 1.25rem;
+  color: #D22E1E;
+  border: solid 1px #004879;
+}
+.signUp > section:first-of-type > section > div:first-of-type > div > input::placeholder {
+  color: #D22E1E;
+  text-align: left;
+  vertical-align: middle;
+  font-size: 1.25rem;
+}
+.signUp > section:first-of-type > section > div:first-of-type > div > input :-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #D22E1E;
+  text-align: left;
+  vertical-align: middle;
+  font-size: 1.25rem;
+}
+.signUp > section:first-of-type > section > div:first-of-type > div > input ::-ms-input-placeholder { /* Microsoft Edge */
+  color: #D22E1E;
+  text-align: left;
+  vertical-align: middle;
+  font-size: 1.25rem;
+}
+.signUp > section:first-of-type > section > div:first-of-type > div > div {
+  background-color: #D22E1E;
+  transform: translateX(-2px);
+  flex: 1;
+  display: grid;
+  border-radius: 0px 5px 5px 0px;
+  place-items: center;
+  border: solid 1px #004879;
+  transition: all ease-out 0.2s;
+}
+.signUp > section:first-of-type > section > div:first-of-type > div > div:hover {
+  background-color: #FFFFFF;
+}
+.signUp > section:first-of-type > section > div:first-of-type > div > div:hover > svg {
+  fill: #D22E1E;
+  stroke: #D22E1E;
+}
+.signUp > section:first-of-type > section > div:last-of-type {
+  margin-top: 4rem;
+  color: #004879;
+}
+.signUp > section:first-of-type > section > div:last-of-type > button {
+  background-color: #D22E1E;
+  color: #FFFFFF;
+  border: 0px;
+  width: 100%;
+  padding: 1rem 0rem;
+  border-radius: 5px;
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 0.1ch;
+  border: solid 1px #D22E1E;
+  transition: all ease-out 0.2s;
+}
+.signUp > section:first-of-type > section > div:last-of-type > button:hover {
+  background-color: #FFFFFF;
+  color: #D22E1E;
+}
+.signUp > section:first-of-type > section > div:last-of-type > h3 {
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.signUp > section:first-of-type > section > div:last-of-type > h3::after {
+  position: absolute;
+  content: "";
+  padding: 2px 35%;
+  left: 15%;
+  bottom: -10%;
+  background-color: #FFFFFF;
+}
+.signUp > section:first-of-type > section > div:last-of-type > h3:hover::after {
+  background-color: #004879;
+}
+.signUp > section:last-of-type {
+  flex: 2;
+  min-width: 300px;
+  background-color: #004879;
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  place-items: flex-start center;
+}
+.signUp > section:last-of-type > section {
+  color: #FFFFFF;
+  z-index: 5;
+  text-align: center;
+  width: 70%;
+  min-width: 250px;
+}
+.signUp > section:last-of-type > section > h2 {
+  padding-top: 14rem;
+  font-size: 3rem;
+}
+.signUp > section:last-of-type > section > h3 {
+  padding-top: 1rem;
+}
+.signUp > section:last-of-type > svg:first-of-type {
+  position: absolute;
+  left: -10%;
+}
+.signUp > section:last-of-type > svg:nth-of-type(2) {
+  position: absolute;
+  bottom: 0px;
+  right: -50px;
+  width: 200%;
+  height: 40%;
+}
+.signUp > section:last-of-type > svg:nth-of-type(3) {
+  position: absolute;
+  bottom: 0px;
+  height: 30%;
+  right: 0px;
+  width: 200%;
+}
+.signUp > section:last-of-type > svg:last-of-type {
+  position: absolute;
+  bottom: 0px;
+  right: -100px;
+  width: 200%;
+}
+
+/*# sourceMappingURL=signup.css.map */
