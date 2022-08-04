@@ -1,0 +1,146 @@
+@import '../../styles/globalStyles.scss';
+
+:root {
+    --num1: 54;
+    --num2: 14;
+    --num3: 48;
+    --num4: 69;
+    --num5: 94;
+}
+
+.goalsWrapper {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+.goals {
+    flex: 1;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.goal {
+    justify-self: flex-start;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    flex: 1;
+    min-width: 300px;
+    max-width: 490px;
+    min-height: 50vh;
+    box-shadow: 0px 10px 10px 5px rgba(0, 72, 121, 0.25);
+    border-radius: 0.5rem;
+    margin: 1.5rem;
+    display: grid;
+    place-items: flex-start center;
+    color: $accent-color;
+    & > section {
+        & > h2 {
+            font-size: 2rem;
+        }
+    }
+    & > svg {
+        &:nth-of-type(1) {
+            position: absolute;
+            bottom: 0px;
+            right: -50px;
+            width: 200%;
+            height: 40%;
+        }
+        &:nth-of-type(2) {
+            position: absolute;
+            bottom: 0px;
+            height: 30%;
+            right: 0px;
+            width: 200%;
+        }
+        &:last-of-type {
+            position: absolute;
+            bottom: 0px;
+            height: 20%;
+            right: -150px;
+            width: 200%;
+        }
+    }
+}
+
+.card .percent {
+    position: relative;
+  }
+  
+  .card svg {
+    position: relative;
+    width: 100%;
+    height: 225px;
+    transform: rotate(-90deg);
+  }
+  
+  .card svg circle {
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: $secondary-color;
+    stroke-width: 10;
+    stroke-linecap: round;
+  }
+
+  .num1 {
+    stroke-dasharray: 625px;
+    stroke-dashoffset: calc(625px - (625px * var(--num1)) / 100);
+  }
+  
+  .num2 {
+    stroke-dasharray: 625px;
+    stroke-dashoffset: calc(625px - (625px * var(--num2)) / 100);
+  }
+
+  .num3 {
+    stroke-dasharray: 625px;
+    stroke-dashoffset: calc(625px - (625px * var(--num3)) / 100);
+  }
+
+  .num4 {
+    stroke-dasharray: 625px;
+    stroke-dashoffset: calc(625px - (625px * var(--num4)) / 100);
+  }
+
+  .num5 {
+    stroke-dasharray: 625px;
+    stroke-dashoffset: calc(625px - (625px * var(--num5)) / 100);
+  }
+  
+  .card .number {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .card .number h3 {
+    font-weight: 600;
+    font-size: 3.5rem;
+  }
+  
+  .card .number h3 span {
+    font-size: 2rem;
+    font-weight: 300;
+  }
+  
+  .card .title h2 {
+    margin: 25px 0 0;
+  }
+  
+  .card:nth-child(1) svg circle:last-of-type {
+    stroke: $accent-color;
+  }
+  
+  .card:nth-child(2) svg circle:last-of-type {
+    stroke: #2ecc71;
+  }
