@@ -74,16 +74,16 @@
 
   .bottom {
     position: absolute;
-    bottom: 1.5rem;
+    bottom: 0rem;
     width: 100%;
-    padding-top: 1.5rem;
     border-top: 2px solid $primary-color;
 
     div {
       padding-left: 10%;
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
       display: flex;
       align-items: center;
-
       position: relative;
       overflow: hidden;
       &::after {

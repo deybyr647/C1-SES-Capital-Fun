@@ -66,13 +66,14 @@
 }
 .navbar-opened .bottom {
   position: absolute;
-  bottom: 1.5rem;
+  bottom: 0rem;
   width: 100%;
-  padding-top: 1.5rem;
   border-top: 2px solid #FFFFFF;
 }
 .navbar-opened .bottom div {
   padding-left: 10%;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
   display: flex;
   align-items: center;
   position: relative;
