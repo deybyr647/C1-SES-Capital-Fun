@@ -1,8 +1,12 @@
 import React from "react";
+import {FaFacebookF} from 'react-icons/fa'
 
-    const streakDisappear = () => {
-        document.getElementById("Streak").style.top = "-200%";
-    }
+const streakDisappear = () => {
+  document.getElementById("Streak").style.top = "-200%";
+}
+
+const url = "https://www.google.com/search?q=streak+symbol&tbm=isch&ved=2ahUKEwiNium5jq_5AhXStXIEHdAGAw0Q2-cCegQIABAA&oq=streak+symbol&gs_lcp=CgNpbWcQAzIFCAAQgAQyBQgAEIAEMgYIABAeEAU6BwgAELEDEEM6BAgAEEM6BggAEB4QCDoECAAQGFC5Alj3FWCBF2gAcAB4AIABQ4gB1QOSAQE4mAEAoAEBqgELZ3dzLXdpei1pbWfAAQE&sclient=img&ei=Eb7sYs29LdLrytMP0I2MaA&bih=736&biw=1440#imgrc=koPz9SPUAShCiM"
+const shareLink = "http://www.facebook.com/share.php?u=" + url
 
 function Streak (props){
     // Whoever is doing later; Change 'r' when it's smaller to something like 12.5 or something
@@ -69,8 +73,8 @@ function Streak (props){
                 </section>
                 <section>
                     {/* Share / Continue */}
-                    <button> 
-                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 10h-2v2h2v6h3v-6h1.82l.18-2h-2v-.833c0-.478.096-.667.558-.667h1.442v-2.5h-2.404c-1.798 0-2.596.792-2.596 2.308v1.692z"/></svg>
+                    <button onClick={()=>window.open(shareLink, '_blank')}> 
+                        <FaFacebookF size="2rem"/>
                     </button>
                     <button onClick={streakDisappear}> 
                         Continue
