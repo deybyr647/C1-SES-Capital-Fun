@@ -44,7 +44,7 @@ export default function CreateGoals() {
 
               <div>
                 <button onClick={() => {
-                  window.location.href = "/missions"
+                  window.location.href = "/creategoals"
                 }}> Create </button>
               </div>
             </section>
