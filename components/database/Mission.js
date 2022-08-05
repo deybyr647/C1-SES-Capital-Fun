@@ -1,4 +1,4 @@
-import {random} from "./Util";
+import { random } from "./Util";
 import firestore from "./FirebaseConfig";
 
 class Mission {
@@ -10,7 +10,11 @@ class Mission {
         this.type = Mission.types[random(0, Mission.types.length - 1)];
     }
 
-    static updateMissions(mission) {
-
+    static toFirestore(mission) {
+        return {
+            description: mission.description,
+            points: mission.points,
+            type: mission.type
+        }
     }
 }

@@ -25,6 +25,5 @@ const addUser = async (userObj) => {
     return userObj;
 }
 
-export { random, addUser };
-export default getUsers;
+export { random, addUser, getUsers };
 

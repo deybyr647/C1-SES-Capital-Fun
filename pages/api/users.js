@@ -1,5 +1,5 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-import getUsers, {addUser} from "../../components/database/Util";
+import { getUsers, addUser } from "../../components/database/Util";
 import User from "../../components/database/User";
 import firestore from "../../components/database/FirebaseConfig";
 

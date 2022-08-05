@@ -1,4 +1,4 @@
-import {random} from "./Util";
+import { random } from "./Util";
 import firestore from "./FirebaseConfig";
 
 class User {
@@ -40,8 +40,6 @@ class User {
 
                     userMissionList.push(userMission);
                 })
-
-                //console.log(userMissionList);
             })
             .catch(error => {
                 console.error("An error occurred...", error);
