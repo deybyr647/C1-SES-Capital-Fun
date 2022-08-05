@@ -2,9 +2,9 @@ function Goals() {
   return (
     <section className='goalsWrapper'>
       <section className='goals'> 
-        <Goal title="Save 100$" num="num1" val="54"/> 
-        <Goal title="Donate 100$" num="num2" val="14"/> 
-        <Goal title="Get 100 Pts" num="num3" val="48"/> 
+        <Goal title="Save towards new car" num="num1" val="54"/> 
+        <Goal title="Credit score to 760" num="num2" val="14"/> 
+        <Goal title="Spend less than $800/m" num="num3" val="48"/> 
       </section>
 
     </section>
