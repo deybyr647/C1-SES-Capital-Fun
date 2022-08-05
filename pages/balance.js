@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import Template from '../components/template/Template'
-import Loader from '../components/loader/Loader'
 import Balance from '../components/balance/Balance'
 
 export default function balance() {
@@ -15,7 +14,7 @@ export default function balance() {
 
       <main>
         <Template>
-            <Balance/>
+          <Balance/>
         </Template>
       </main>
     </div>
