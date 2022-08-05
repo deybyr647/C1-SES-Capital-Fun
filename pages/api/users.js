@@ -4,14 +4,26 @@ import User from "../../components/database/User";
 import firestore from "../../components/database/FirebaseConfig";
 
 const handler = async (req, res) => {
-  let deyby = new User({first: "Deyby", last: "Rodriguez"}, "deybyr647@gmail.com", "Save 4 Retirement");
 
-  setTimeout(() => {
-    console.log(deyby);
-    addUser(deyby);
-  }, 2000)
+  if(req.method === "POST"){
+    let email = req.query.email;
+    let goal = "Save 4 Retirement"
+    const name = {
+      first: "",
+      last: ""
+    }
+    let user = new User(name, email, goal);
 
-  res.status(200).json(User.toFirestore(deyby));
+    setTimeout(() => {
+      addUser(User.toFirestore(user));
+    }, 2000);
+
+    res.status(200).json(User.toFirestore(user));
+  } else {
+    res.status(200).json(req.body);
+  }
+
+
 }
 
 export default handler;
