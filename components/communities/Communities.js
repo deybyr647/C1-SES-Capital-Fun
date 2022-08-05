@@ -1,5 +1,7 @@
 import React from 'react'
-
+import {RiGroup2Fill} from "react-icons/ri"
+import {IoMdAddCircle} from "react-icons/io"
+// import {HiOutlineDotsVertical} from "react-icons/hi"
 
 const communities = [
   {
@@ -18,8 +20,18 @@ const communities = [
 
 function Communities() {
   return (
-    <div>
-      Communities page to display all communities you are part of.
+    <div className = "communities-container">
+      {communities.map((community, i) => 
+        <div className="community">
+          <RiGroup2Fill className='icon'/>
+          {" "+community.name}
+          {/* <HiOutlineDotsVertical className = "menu"/> */}
+        </div>
+      )}
+      <div className = "community">
+        <IoMdAddCircle className='icon'/>
+        {" "}Create Leaderboard
+      </div>
     </div>
   )
 }
