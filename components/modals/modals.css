@@ -1,5 +1,7 @@
 .modal-background {
   position: fixed;
+  left: 0;
+  top: 0;
   width: 100vw;
   height: 100vh;
   background: hsla(204deg, 100%, 18%, 0.432);
@@ -17,6 +19,9 @@
   display: flex;
   justify-content: center;
   overflow: hidden;
+}
+.modal-background .modal > svg {
+  z-index: -1;
 }
 .modal-background .modal > svg:nth-of-type(1) {
   position: absolute;
@@ -43,6 +48,7 @@
   width: 100%;
   color: #D22E1E;
   position: relative;
+  font-size: 3rem;
 }
 .modal-background .modal > div h1:before {
   content: "";
@@ -75,6 +81,7 @@
   border: hidden;
   border-radius: 0.25rem;
   transition: all ease-out 0.2s;
+  cursor: pointer;
 }
 .modal-background .modal > div .button-group button:hover {
   background-color: #FFFFFF;
@@ -90,6 +97,7 @@
 }
 .modal-background .modal > div .button-group .continue-button {
   width: 70%;
+  min-width: 300px;
   color: #FFFFFF;
   font-size: 1.5rem;
   font-weight: bold;
@@ -122,9 +130,63 @@
 }
 .mission-complete > div ul {
   margin: 0;
+  text-align: left;
 }
 .mission-complete > div ul li {
   font-size: 1.2rem;
+}
+
+.createCommunity {
+  width: 100%;
+  margin-top: 2rem;
+}
+.createCommunity > div {
+  display: flex;
+  margin: auto;
+  margin-top: 1rem;
+}
+.createCommunity > div > input {
+  flex: 5;
+  padding: 1rem;
+  border-radius: 5px 0px 0px 5px;
+  font-size: 1rem;
+  color: #D22E1E;
+  border: solid 1px #004879;
+}
+.createCommunity > div > input::placeholder {
+  color: #D22E1E;
+  text-align: left;
+  vertical-align: middle;
+  font-size: 1.25rem;
+}
+.createCommunity > div > input :-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #D22E1E;
+  text-align: left;
+  vertical-align: middle;
+  font-size: 1.25rem;
+}
+.createCommunity > div > input ::-ms-input-placeholder { /* Microsoft Edge */
+  color: #D22E1E;
+  text-align: left;
+  vertical-align: middle;
+  font-size: 1.25rem;
+}
+.createCommunity > div > div {
+  background-color: #D22E1E;
+  transform: translateX(-2px);
+  flex: 1;
+  display: grid;
+  border-radius: 0px 5px 5px 0px;
+  place-items: center;
+  border: solid 1px #004879;
+  transition: all ease-out 0.2s;
+}
+.createCommunity > div > div:hover {
+  background-color: #FFFFFF;
+}
+.createCommunity > div > div:hover > svg {
+  fill: #D22E1E;
+  stroke: #D22E1E;
 }
 
 /*# sourceMappingURL=modals.css.map */

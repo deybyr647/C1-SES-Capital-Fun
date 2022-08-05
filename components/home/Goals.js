@@ -1,3 +1,5 @@
+import { buildStyles, CircularProgressbar } from "react-circular-progressbar"
+
 function Goals() {
   return (
     <section className='goalsWrapper'>
@@ -28,7 +30,18 @@ const Goal = (props) => {
         <section>
           <h2> {props.title} </h2>
           <section>
-          <div class="card">
+          <div className="progress-spinner">
+            <CircularProgressbar
+              value={props.val}
+              styles={buildStyles({
+                strokeLinecap: 'round',
+                pathColor: '#D22E1E',
+                trailColor: '#004879',
+              })}
+            />
+            <h3>{props.val}%</h3>
+          </div>
+          {/* <div class="card">
             <div class="percent">
               <svg>
                 <circle cx="105" cy="105" r="100"></circle>
@@ -38,7 +51,8 @@ const Goal = (props) => {
                 <h3> {props.val} <span>%</span></h3>
               </div>
             </div>
-          </div>
+          </div> */}
+
           </section>
         </section>
       </div>

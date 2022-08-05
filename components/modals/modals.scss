@@ -2,6 +2,8 @@
 
 .modal-background {
   position: fixed;
+  left: 0;
+  top: 0;
   width: 100vw;
   height: 100vh;
   background: hsla(204, 100%, 18%, 0.432);
@@ -23,6 +25,7 @@
     overflow: hidden;
 
     & > svg {
+        z-index: -1;
         &:nth-of-type(1) {
             position: absolute;
             bottom: 0px;
@@ -52,6 +55,7 @@
         width: 100%;
         color: $accent-color;
         position: relative;
+        font-size: 3rem;
         &:before {
           content: "";
           position: absolute;
@@ -79,12 +83,12 @@
         left: 0;
         display: flex;
         justify-content: center;
-
         button {
           background: $secondary-color;
           border: hidden;
           border-radius: 0.25rem;
           transition: all ease-out 0.2s;
+          cursor: pointer;
           &:hover {
             & > svg {
               fill: $secondary-color;
@@ -102,6 +106,7 @@
 
         .continue-button {
           width: 70%;
+          min-width: 300px;
           color: $primary-color;
           font-size: 1.5rem;
           font-weight: bold;
@@ -152,11 +157,66 @@
 
     ul {
       margin: 0;
+      text-align: left;
 
       li {
         font-size: 1.2rem;
       }
     }
+  }
+}
 
+
+.createCommunity {
+  width: 100%;
+  margin-top: 2rem;
+  & > div {
+    display: flex;
+    margin: auto;
+    margin-top: 1rem;
+    & > input {
+      flex: 5;
+      padding: 1rem;
+      border-radius: 5px 0px 0px 5px;
+      font-size: 1rem;
+      color: $accent-color;
+      border: solid 1px $secondary-color;
+      &::placeholder {
+          color: $accent-color;
+          text-align: left;
+          vertical-align: middle;
+          font-size: 1.25rem;
+      }
+      :-ms-input-placeholder { /* Internet Explorer 10-11 */
+          color: $accent-color;
+          text-align: left;
+          vertical-align: middle;
+          font-size: 1.25rem;
+      }
+
+      ::-ms-input-placeholder { /* Microsoft Edge */
+          color: $accent-color;
+          text-align: left;
+          vertical-align: middle;
+          font-size: 1.25rem;
+      }
+    }
+    & > div {
+      background-color: $accent-color;
+      transform: translateX(-2px);
+      flex: 1;
+      display: grid;
+      border-radius: 0px 5px 5px 0px;
+      place-items: center;
+      border: solid 1px $secondary-color;
+      transition: all ease-out 0.2s;
+      &:hover {
+          background-color: $primary-color;
+          & > svg {
+              fill: $accent-color;
+              stroke: $accent-color;
+          }
+      }
+    }
   }
 }

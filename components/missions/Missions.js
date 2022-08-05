@@ -119,7 +119,10 @@ function MissionsList({incomplete, complete, title}) {
     <div><ul>
       {incomplete.map((mission, i) => 
         <li key={i}>
-          <h3>{mission.missionReference.description}</h3>
+          <h3>
+            <span>({mission.missionReference.points} pts) </span>
+            {mission.missionReference.description}
+          </h3>
           <div className="percentComplete">
             <span>80</span>
             <span>/</span>
@@ -129,7 +132,10 @@ function MissionsList({incomplete, complete, title}) {
       )}
       {complete.map((mission, i) => 
         <li key={i} className="completed">
-          <h3>{mission.missionReference.description}</h3>
+          <h3>
+            <span>({mission.missionReference.points} pts) </span>
+            {mission.missionReference.description}
+          </h3>
           <div className="percentComplete">
             <span>Finished!</span>
           </div>
