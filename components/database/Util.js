@@ -10,6 +10,23 @@ const getUsers = async () => {
 
 const random = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
+const postUserData = async (email) => {
+    const res = await fetch(`/api/users?email=${email}`, {
+        method: "POST",
+        mode: "cors",
+        cache: "no-cache",
+        credentials: "same-origin",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        redirect: "follow",
+        referrerPolicy: "no-referrer",
+        body: JSON.stringify({ email }),
+    });
+
+    return res.json();
+};
+
 const addUser = async (userObj) => {
     const usersCollection = firestore.collection("users");
 
@@ -25,5 +42,6 @@ const addUser = async (userObj) => {
     return userObj;
 }
 
-export { random, addUser, getUsers };
+
+export { random, addUser, postUserData };
 
