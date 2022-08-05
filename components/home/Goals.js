@@ -1,5 +1,3 @@
-import React, { useEffect } from 'react'
-
 function Goals() {
   return (
     <section className='goalsWrapper'>
@@ -46,14 +44,6 @@ const Goal = (props) => {
       </div>
     </>
   )
-}
-
-const Empty = () => {
-  <>
-    <div className='empty'>
-
-    </div>
-  </>
 }
 
 export default Goals
