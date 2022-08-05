@@ -1,9 +1,8 @@
 import React, { useRef, useState } from 'react'
 import {FaFacebookF} from 'react-icons/fa'
 
-function ModalBase({children, title, shareLink}) {
+function ModalBase({children, title, shareLink, showModal, setShowModal}) {
 
-  const [showModal, setShowModal] = useState(true)
   const ref = useRef()
 
   const closeModal = () => setShowModal(false)
