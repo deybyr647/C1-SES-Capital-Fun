@@ -7,9 +7,9 @@ const missionReference = {
   tier: 'Platinum'
 }
 
-function CreateCommunity() {
+function CreateCommunity({showModal, setShowModal}) {
   return (
-    <ModalBase title={"Create Community"} hasShare={false}>
+    <ModalBase title={"Create Community"} hasShare={false} showModal={showModal} setShowModal={setShowModal}>
       <div className="createCommunity">
         <div> 
             <input type="text" id="name" name="name" required
