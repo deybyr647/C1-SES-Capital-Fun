@@ -59,6 +59,7 @@
   letter-spacing: 0.1ch;
   border: solid 1px #D22E1E;
   transition: all ease-out 0.2s;
+  cursor: pointer;
 }
 .login > section > section > div:last-of-type > button:hover {
   background-color: #FFFFFF;
@@ -67,6 +68,7 @@
 .login > section > section > div:last-of-type > h3 {
   position: relative;
   overflow: hidden;
+  cursor: pointer;
 }
 .login > section > section > div:last-of-type > h3::after {
   position: absolute;

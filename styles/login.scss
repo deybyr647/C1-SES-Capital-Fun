@@ -60,6 +60,7 @@
                         letter-spacing: 0.1ch;
                         border: solid 1px $accent-color;
                         transition: all ease-out 0.2s;
+                        cursor: pointer;
                         &:hover {
                             background-color: $primary-color;
                             color: $accent-color;
@@ -68,6 +69,7 @@
                     & > h3 {
                         position: relative;
                         overflow: hidden;
+                        cursor: pointer;
                         &::after {
                             position: absolute;
                             content: "";

@@ -38,8 +38,12 @@ export default function login() {
               </div>
             </div>
             <div> 
-              <button> Login</button>
-              <h3> Don't have an account? Sign Up now</h3>
+              <button onClick={() => {
+                window.location.href = '/'
+              }}> Login</button>
+              <h3 onClick={() => {
+                window.location.href = '/signup'
+              }}> Don't have an account? Sign Up now</h3>
             </div>
           </section>
         </section>

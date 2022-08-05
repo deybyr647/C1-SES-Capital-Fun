@@ -33,10 +33,10 @@ function Navbar({menuOpened, toggleMenu}) {
         </div>
         <div className="links">
           <ul>
-            <li><MdHome/><h2><a href="#">Home</a></h2></li>
-            <li><MdGroups/><h2><a href="#">Communities</a></h2></li>
-            <li><MdStars/><h2><a href="#">Missions</a></h2></li>
-            <li><MdSettings/><h2><a href="#">Setting</a></h2></li>
+            <li><MdHome/><h2><a href="/">Home</a></h2></li>
+            <li><MdGroups/><h2><a href="/communitiesHome">Communities</a></h2></li>
+            <li><MdStars/><h2><a href="/missionHome">Missions</a></h2></li>
+            <li><MdSettings/><h2><a href="/creategoals">Create Post</a></h2></li>
           </ul>
         </div>
         <div className="bottom">
