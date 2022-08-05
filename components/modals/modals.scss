@@ -81,12 +81,12 @@
         left: 0;
         display: flex;
         justify-content: center;
-
         button {
           background: $secondary-color;
           border: hidden;
           border-radius: 0.25rem;
           transition: all ease-out 0.2s;
+          cursor: pointer;
           &:hover {
             & > svg {
               fill: $secondary-color;

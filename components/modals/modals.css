@@ -77,6 +77,7 @@
   border: hidden;
   border-radius: 0.25rem;
   transition: all ease-out 0.2s;
+  cursor: pointer;
 }
 .modal-background .modal > div .button-group button:hover {
   background-color: #FFFFFF;
