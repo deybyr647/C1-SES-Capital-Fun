@@ -41,6 +41,7 @@
   place-items: flex-start center;
   color: #D22E1E;
   transition: box-shadow ease-out 0.2s;
+  cursor: pointer;
 }
 .goal:hover {
   box-shadow: 0px 10px 10px 5px rgba(255, 0, 55, 0.45);

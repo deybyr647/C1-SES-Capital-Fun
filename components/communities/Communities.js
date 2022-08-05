@@ -30,7 +30,7 @@ function Communities() {
       )}
       <div className = "community">
         <IoMdAddCircle className='icon'/>
-        {" "}Create Leaderboard
+        {" "}Create Community
       </div>
     </div>
   )
