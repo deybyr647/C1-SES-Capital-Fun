@@ -1,13 +1,9 @@
 import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.scss'
 import Template from '../components/template/Template'
 import Loader from '../components/loader/Loader'
-import HomeComp from '../components/home/Home'
-import Missions from '../components/missions/Missions'
-import Streak from '../components/streak/Streak'
+import Balance from '../components/balance/Balance'
 
-export default function Home() {
+export default function balance() {
 
   return (
     <div>
@@ -19,9 +15,8 @@ export default function Home() {
 
       <main>
         <Loader></Loader> 
-        <Streak streak="1"/>
         <Template>
-          <HomeComp/>
+            <Balance/>
         </Template>
       </main>
     </div>

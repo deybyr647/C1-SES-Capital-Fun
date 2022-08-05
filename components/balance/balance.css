@@ -32,7 +32,8 @@
 .balance-details .functionality {
   margin: 1.5rem auto;
   height: 5.5rem;
-  width: 30rem;
+  border-radius: 0.5rem;
+  width: 40rem;
   max-width: 90%;
   padding-top: 0.5rem;
   background: white;
@@ -59,7 +60,8 @@
   width: 2.2rem;
 }
 .balance-details .transactions {
-  width: 30rem;
+  width: 40rem;
+  border-radius: 0.5rem;
   height: 23rem;
   max-width: 90%;
   background: #FFFFFF;
