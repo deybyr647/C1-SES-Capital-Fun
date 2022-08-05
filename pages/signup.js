@@ -6,6 +6,7 @@ import { useState } from 'react';
 import { useRouter } from 'next/router';
 
 import { useAuth } from '../components/database/AuthProvider';
+import { postUserData } from "../components/database/Util";
 
 export default function Signup() {
     const [email, setEmail] = useState("");
@@ -32,6 +33,12 @@ export default function Signup() {
             setError("Password do not match")
             e.preventDefault();
         }
+
+        (async () => {
+            const req = await postUserData(email);
+            console.log(req);
+            console.log("Sent data to backend!");
+        })();
     }
 
     const emailOnChange = (e) => {
@@ -90,7 +97,7 @@ export default function Signup() {
               </div>
             </div>
             <div> 
-              <button onClick={e => onSubmit(e)}>Login</button>
+              <button onClick={e => onSubmit(e)}>Sign Up</button>
               <h3 onClick={() => {
                 window.location.href = "/login"
               }}> Don't have an account? Sign Up now</h3>
