@@ -10,7 +10,7 @@ import '../components/home/balance.css'
 import '../styles/login.css'
 import '../styles/signup.css'
 import '../components/communities/communities.css'
-
+import '../components/modals/modals.css'
 
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />

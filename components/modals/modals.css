@@ -16,7 +16,28 @@
   z-index: 201;
   display: flex;
   justify-content: center;
-  overflow-x: hidden;
+  overflow: hidden;
+}
+.modal-background .modal > svg:nth-of-type(1) {
+  position: absolute;
+  bottom: 0px;
+  right: -300px;
+  width: 200%;
+  height: 40%;
+}
+.modal-background .modal > svg:nth-of-type(2) {
+  position: absolute;
+  bottom: 0px;
+  height: 30%;
+  right: -200px;
+  width: 200%;
+}
+.modal-background .modal > svg:last-of-type {
+  position: absolute;
+  bottom: 0px;
+  height: 20%;
+  right: -300px;
+  width: 200%;
 }
 .modal-background .modal > div h1 {
   width: 100%;
@@ -53,6 +74,14 @@
   background: #004879;
   border: hidden;
   border-radius: 0.25rem;
+  transition: all ease-out 0.2s;
+}
+.modal-background .modal > div .button-group button:hover {
+  background-color: #FFFFFF;
+  color: #004879;
+}
+.modal-background .modal > div .button-group button:hover > svg {
+  fill: #004879;
 }
 .modal-background .modal > div .button-group .facebook-button {
   margin-right: 0.25rem;

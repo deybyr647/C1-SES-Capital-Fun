@@ -20,7 +20,31 @@
 
     display: flex;
     justify-content: center;
-    overflow-x: hidden;
+    overflow: hidden;
+
+    & > svg {
+        &:nth-of-type(1) {
+            position: absolute;
+            bottom: 0px;
+            right: -300px;
+            width: 200%;
+            height: 40%;
+        }
+        &:nth-of-type(2) {
+            position: absolute;
+            bottom: 0px;
+            height: 30%;
+            right: -200px;
+            width: 200%;
+        }
+        &:last-of-type {
+            position: absolute;
+            bottom: 0px;
+            height: 20%;
+            right: -300px;
+            width: 200%;
+        }
+    }
 
     > div {
 
@@ -60,6 +84,14 @@
           background: $secondary-color;
           border: hidden;
           border-radius: 0.25rem;
+          transition: all ease-out 0.2s;
+          &:hover {
+            & > svg {
+              fill: $secondary-color;
+            }
+            background-color: $primary-color;
+            color: $secondary-color;
+          }
         }
 
         .facebook-button {
