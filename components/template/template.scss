@@ -1,0 +1,154 @@
+@import "../../styles/globalStyles.scss";
+
+.template {
+  max-width: 100vw;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  position: static;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  background: $secondary-color;
+  min-height: 30rem;
+  height: 100vh;
+  flex: none;
+  border-right: 0.01px solid rgba(0, 0, 0, 0.075);
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar-opened {
+    position: fixed;
+    z-index: 100;
+  }
+
+  .component-blur {
+    opacity: 0.7;
+    filter: brightness(40%);
+    backdrop-filter: blur(80px);
+  }
+}
+
+.navbar-opened {
+  
+  width: 18rem;
+
+  svg {
+    color: white;
+    width: 3rem;
+    height: 2rem;
+  }
+
+  h2 {
+    color: $primary-color;
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .top {
+    padding-top: 1.5rem;
+    padding-left: 10%;
+    display: flex;
+    align-items: center;
+    h2 {
+      padding: 0;
+    }
+  }
+
+  .links {
+    padding-top: 2rem;
+    li {
+      padding-bottom: 0.5rem;
+      padding-left: 10%;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        padding: 100rem 2px;
+        background-color: $secondary-color;
+      }
+      &:hover {
+        background-color: $secondary-light;
+        &::after {
+          background-color: $accent-color;
+        }
+      }
+    }
+  }
+
+  .bottom {
+    position: absolute;
+    bottom: 0rem;
+    width: 100%;
+    border-top: 2px solid $primary-color;
+
+    div {
+      padding-left: 10%;
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        padding: 100rem 2px;
+        background-color: $secondary-color;
+      }
+      &:hover {
+        background-color: $secondary-light;
+        &::after {
+          background-color: $accent-color;
+        }
+      }
+    }
+  }
+}
+
+.navbar-closed {
+  width: 4rem;
+  display: flex;
+  justify-content: center;
+  svg {
+    color: white;
+    width: 2rem;
+    height: 2rem;
+  }
+  .top {
+    padding-top: 1.5rem;
+    h2 {
+      display: none;
+    }
+  }
+
+  .links {
+    display: none;
+  }
+
+  .bottom {
+    display: none;
+  }
+}
+
+.animate {
+  transition: width 0.5s;
+}
+
+.component {
+  margin: 0 auto;
+  overflow-x: hidden;
+  width: 100%;
+}

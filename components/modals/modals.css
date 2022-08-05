@@ -1,0 +1,130 @@
+.modal-background {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: hsla(204deg, 100%, 18%, 0.432);
+  backdrop-filter: blur(1px);
+  z-index: 200;
+}
+.modal-background .modal {
+  position: relative;
+  margin: 10vh auto;
+  width: 35rem;
+  height: 20rem;
+  background: #FFFFFF;
+  border-radius: 0.5rem;
+  z-index: 201;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+.modal-background .modal > svg:nth-of-type(1) {
+  position: absolute;
+  bottom: 0px;
+  right: -300px;
+  width: 200%;
+  height: 40%;
+}
+.modal-background .modal > svg:nth-of-type(2) {
+  position: absolute;
+  bottom: 0px;
+  height: 30%;
+  right: -200px;
+  width: 200%;
+}
+.modal-background .modal > svg:last-of-type {
+  position: absolute;
+  bottom: 0px;
+  height: 20%;
+  right: -300px;
+  width: 200%;
+}
+.modal-background .modal > div h1 {
+  width: 100%;
+  color: #D22E1E;
+  position: relative;
+}
+.modal-background .modal > div h1:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -7rem;
+  background: #004879;
+  padding-top: 0.25rem;
+  width: 6rem;
+}
+.modal-background .modal > div h1:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -7rem;
+  background: #004879;
+  padding-top: 0.25rem;
+  width: 6rem;
+}
+.modal-background .modal > div .button-group {
+  width: 100%;
+  position: absolute;
+  bottom: 2rem;
+  left: 0;
+  display: flex;
+  justify-content: center;
+}
+.modal-background .modal > div .button-group button {
+  background: #004879;
+  border: hidden;
+  border-radius: 0.25rem;
+  transition: all ease-out 0.2s;
+}
+.modal-background .modal > div .button-group button:hover {
+  background-color: #FFFFFF;
+  color: #004879;
+}
+.modal-background .modal > div .button-group button:hover > svg {
+  fill: #004879;
+}
+.modal-background .modal > div .button-group .facebook-button {
+  margin-right: 0.25rem;
+  width: 6%;
+  min-width: 1.5rem;
+}
+.modal-background .modal > div .button-group .continue-button {
+  width: 70%;
+  color: #FFFFFF;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .modal {
+    max-width: min(90vw, 25rem);
+  }
+  .modal > div h1:before {
+    max-width: 3rem;
+    left: -3rem !important;
+  }
+  .modal > div h1::after {
+    max-width: 3rem;
+    right: -3rem !important;
+  }
+  .modal > div .continue-button {
+    width: 50% !important;
+  }
+}
+.mission-complete > div {
+  color: #004879;
+}
+.mission-complete > div h2 {
+  margin: 0;
+  padding: 0;
+}
+.mission-complete > div ul {
+  margin: 0;
+}
+.mission-complete > div ul li {
+  font-size: 1.2rem;
+}
+
+/*# sourceMappingURL=modals.css.map */

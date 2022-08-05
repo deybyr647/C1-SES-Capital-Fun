@@ -1,0 +1,173 @@
+@import './globalStyles.scss';
+
+.signUp {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    overflow-x: hidden;
+    flex-wrap: wrap;
+    & > section {
+        min-height: 100vh;
+        &:first-of-type{
+            flex: 4;
+            min-width: 300px;
+            display: grid;
+            place-items: center;
+            & > section {
+                & > div {
+                    min-width: 275px;
+                    width: 25vw;
+                    &:first-of-type {
+                        & > h1 {
+                            text-align: center;
+                            font-size: 3rem;
+                            color: $accent-color;
+                            & > span {
+                                color: $secondary-color;
+                            }
+                        }
+                        & > div {
+                            display: flex;
+                            margin-top: 1rem;
+                            & > input {
+                                flex: 5;
+                                padding: 1rem;
+                                border-radius: 5px 0px 0px 5px;
+                                font-size: 1.25rem;
+                                color: $accent-color;
+                                border: solid 1px $secondary-color;
+                                &::placeholder {
+                                    color: $accent-color;
+                                    text-align: left;
+                                    vertical-align: middle;
+                                    font-size: 1.25rem;
+                                }
+                                :-ms-input-placeholder { /* Internet Explorer 10-11 */
+                                    color: $accent-color;
+                                    text-align: left;
+                                    vertical-align: middle;
+                                    font-size: 1.25rem;
+                                }
+                                
+                                ::-ms-input-placeholder { /* Microsoft Edge */
+                                    color: $accent-color;
+                                    text-align: left;
+                                    vertical-align: middle;
+                                    font-size: 1.25rem;
+                                }
+                            }
+                            & > div {
+                                background-color: $accent-color;
+                                transform: translateX(-2px);
+                                flex: 1;
+                                display: grid;
+                                border-radius: 0px 5px 5px 0px;
+                                place-items: center;
+                                border: solid 1px $secondary-color;
+                                transition: all ease-out 0.2s;
+                                &:hover {
+                                    background-color: $primary-color;
+                                    & > svg {
+                                        fill: $accent-color;
+                                        stroke: $accent-color;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &:last-of-type {
+                        margin-top: 4rem;
+                        color: $secondary-color;
+                        & > button {
+                            background-color: $accent-color;
+                            color: $primary-color;
+                            border: 0px;
+                            width: 100%;
+                            padding: 1rem 0rem;
+                            border-radius: 5px;
+                            font-size: 2rem;
+                            font-weight: 600;
+                            letter-spacing: 0.1ch;
+                            border: solid 1px $accent-color;
+                            transition: all ease-out 0.2s;
+                            cursor: pointer;
+                            &:hover {
+                                background-color: $primary-color;
+                                color: $accent-color;
+                            }
+                        }
+                        & > h3 {
+                            text-align: center;
+                            position: relative;
+                            overflow: hidden;
+                            cursor: pointer;
+                            &::after {
+                                position: absolute;
+                                content: "";
+                                padding: 2px 35%;
+                                left: 15%;
+                                bottom: -10%;
+                                background-color: $primary-color;
+                            }
+                            &:hover {
+                                &::after {
+                                    background-color: $secondary-color;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+        }
+        &:last-of-type {
+            flex: 2;
+            min-width: 300px;
+            background-color: $secondary-color;
+            position: relative;
+            overflow: hidden;
+            display: grid;
+            place-items: center;
+            & > section {
+                color: $primary-color;
+                z-index: 5;
+                text-align: center;
+                width: 70%;
+                min-width: 250px;
+                & > h2 {
+                    font-size: 3rem;
+                }
+                & > h3 {
+                    padding-top: 1rem;
+
+                }
+            }
+            & > svg {
+                &:first-of-type {
+                    position: absolute;
+                    left: -10%;
+                }
+                &:nth-of-type(2) {
+                    position: absolute;
+                    bottom: 0px;
+                    right: -50px;
+                    width: 200%;
+                    height: 40%;
+                }
+                &:nth-of-type(3) {
+                    position: absolute;
+                    bottom: 0px;
+                    height: 30%;
+                    right: 0px;
+                    width: 200%;
+                }
+                &:last-of-type {
+                    position: absolute;
+                    bottom: 0px;
+                    right: -100px;
+                    width: 200%;
+                }
+            }
+        }
+    }
+}
