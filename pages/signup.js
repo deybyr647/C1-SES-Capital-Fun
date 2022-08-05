@@ -97,10 +97,10 @@ export default function Signup() {
               </div>
             </div>
             <div> 
-              <button onClick={e => onSubmit(e)}>Sign Up</button>
+              <button onClick={e => {onSubmit(e); window.location.href='/'}}>Sign Up</button>
               <h3 onClick={() => {
                 window.location.href = "/login"
-              }}> Don't have an account? Sign Up now</h3>
+              }}> Have an account? Login Now! </h3>
             </div>
           </section>
         </section>

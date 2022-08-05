@@ -119,8 +119,7 @@
   position: relative;
   overflow: hidden;
   display: grid;
-  place-items: flex-start center;
-  padding-top: 8rem;
+  place-items: center;
 }
 .signUp > section:last-of-type > section {
   color: #FFFFFF;
