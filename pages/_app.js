@@ -11,6 +11,8 @@ import '../styles/login.css'
 import '../styles/signup.css'
 import '../components/communities/communities.css'
 import '../components/modals/modals.css'
+import '../styles/creategoals.css'
+import 'react-calendar/dist/Calendar.css';
 
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />
