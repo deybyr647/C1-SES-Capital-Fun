@@ -41,16 +41,23 @@
     display: grid;
     place-items: flex-start center;
     color: $accent-color;
+    transition: box-shadow ease-out 0.2s;
+
+    &:hover {
+      box-shadow: 0px 10px 10px 5px rgba(255, 0, 55, 0.45);
+    }
+
     & > section {
         & > h2 {
             font-size: 2rem;
         }
     }
+
     & > svg {
         &:nth-of-type(1) {
             position: absolute;
             bottom: 0px;
-            right: -50px;
+            right: -60px;
             width: 200%;
             height: 40%;
         }
