@@ -1,4 +1,4 @@
-import { firestore } from './FirebaseConfig';
+import {firestore} from './FirebaseConfig';
 import User from "./User";
 
 const getUsers = async () => {
@@ -9,6 +9,22 @@ const getUsers = async () => {
 };
 
 const random = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+
+const getUserData = async (email) => {
+    const res = await fetch(`/api/users?email=${email}`, {
+        method: "GET",
+        mode: "cors",
+        cache: "no-cache",
+        credentials: "same-origin",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        redirect: "follow",
+        referrerPolicy: "no-referrer"
+    });
+
+    return res.json();
+}
 
 const postUserData = async (email) => {
     const res = await fetch(`/api/users?email=${email}`, {
@@ -42,6 +58,21 @@ const addUser = async (userObj) => {
     return userObj;
 }
 
+const queryUser = async (email) => {
+    const usersCollection = firestore.collection("users");
 
-export { random, addUser, postUserData };
+    try {
+        const queryUserByEmail = usersCollection.where("email", "==", email);
+        const queryResults = await queryUserByEmail.get();
+
+        return queryResults.docs[0].data();
+
+    } catch(err) {
+        console.error("An error occurred...", err);
+        return {};
+    }
+}
+
+
+export { random, addUser, queryUser, getUserData, postUserData };
 

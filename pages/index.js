@@ -7,9 +7,22 @@ import HomeComp from '../components/home/Home'
 import Missions from '../components/missions/Missions'
 import MissionComplete from '../components/modals/MissionComplete'
 import Streak from '../components/streak/Streak'
+import {useAuth} from "../components/database/AuthProvider";
+import {useEffect, useState} from "react";
+import {getUserData} from "../components/database/Util";
 
 export default function Home() {
+    const { authUser } = useAuth();
+    const [userData, setUserData] = useState({});
 
+    useEffect(() => {
+        (async () => {
+            const user = await getUserData(authUser.email);
+            setUserData(user);
+        })();
+    }, [authUser])
+
+    console.log(userData);
   return (
     <div>
       <Head>
