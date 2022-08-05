@@ -7,5 +7,8 @@ const getUsers = async () => {
     return allUsers.docs.map(u => u.data());
 };
 
+const random = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+
+export { random };
 export default getUsers;
 
