@@ -2,7 +2,7 @@
 
 .balance-details {
   padding-top: 1.5rem;
-  background: $secondary-color;
+  background: $secondary-light;
   width: 100%;
   height: 100%;
   text-align: center;
@@ -36,7 +36,7 @@
   .functionality {
     margin: 1.5rem auto;
     height: 5.5rem;
-    border-radius: 0.5rem;
+    border-radius: 0.25rem;
     width: 40rem;
     max-width: 90%;
     padding-top: 0.5rem;
@@ -44,7 +44,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    color: $secondary-light;
+    color: $secondary-color;
 
     div {
       width: 33%;
@@ -59,8 +59,8 @@
     }
 
     svg {
-      fill: $secondary-light;
-      stroke: $secondary-light;
+      fill: $secondary-color;
+      stroke: $secondary-color;
       height: 2.2rem;
       width: 2.2rem;
     }
@@ -68,27 +68,27 @@
 
   .transactions {
     width: 40rem;
-    border-radius: 0.5rem;
+    border-radius: 0.25rem;
     height: 23rem;
     max-width: 90%;
     background: $primary-color;
     margin: 0 auto;
-    color: $secondary-light;
+    color: $secondary-color;
 
     .top-row {
 
       padding: 1rem 2rem 0.5rem 2rem;
       display: flex;
       justify-content: space-between;
-      border-bottom: 1px solid $secondary-color;
+      border-bottom: 1px solid $secondary-light;
 
       h4 {
         font-size: 0.8rem; 
         margin: 0;
       }
       svg {
-        fill: $secondary-light;
-        stroke: $secondary-light;
+        fill: $secondary-color;
+        stroke: $secondary-color;
         height: 1.2rem;
         width: 1.2rem;
       }
@@ -99,7 +99,7 @@
       padding: 0.8rem 2rem 0.8rem 2rem;
       display: flex;
       justify-content: space-between;
-      border-bottom: 1px solid $secondary-color;
+      border-bottom: 1px solid $secondary-light;
       text-align: left;
 
       :first-child {

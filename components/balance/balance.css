@@ -1,6 +1,6 @@
 .balance-details {
   padding-top: 1.5rem;
-  background: #004879;
+  background: #0076C4;
   width: 100%;
   height: 100%;
   text-align: center;
@@ -32,7 +32,7 @@
 .balance-details .functionality {
   margin: 1.5rem auto;
   height: 5.5rem;
-  border-radius: 0.5rem;
+  border-radius: 0.25rem;
   width: 40rem;
   max-width: 90%;
   padding-top: 0.5rem;
@@ -40,7 +40,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  color: #0076C4;
+  color: #004879;
 }
 .balance-details .functionality div {
   width: 33%;
@@ -54,33 +54,33 @@
   font-weight: bold;
 }
 .balance-details .functionality svg {
-  fill: #0076C4;
-  stroke: #0076C4;
+  fill: #004879;
+  stroke: #004879;
   height: 2.2rem;
   width: 2.2rem;
 }
 .balance-details .transactions {
   width: 40rem;
-  border-radius: 0.5rem;
+  border-radius: 0.25rem;
   height: 23rem;
   max-width: 90%;
   background: #FFFFFF;
   margin: 0 auto;
-  color: #0076C4;
+  color: #004879;
 }
 .balance-details .transactions .top-row {
   padding: 1rem 2rem 0.5rem 2rem;
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid #004879;
+  border-bottom: 1px solid #0076C4;
 }
 .balance-details .transactions .top-row h4 {
   font-size: 0.8rem;
   margin: 0;
 }
 .balance-details .transactions .top-row svg {
-  fill: #0076C4;
-  stroke: #0076C4;
+  fill: #004879;
+  stroke: #004879;
   height: 1.2rem;
   width: 1.2rem;
 }
@@ -88,7 +88,7 @@
   padding: 0.8rem 2rem 0.8rem 2rem;
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid #004879;
+  border-bottom: 1px solid #0076C4;
   text-align: left;
 }
 .balance-details .transactions .element :first-child :first-child {
