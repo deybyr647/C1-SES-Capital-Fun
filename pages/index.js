@@ -19,8 +19,8 @@ export default function Home() {
       </Head>
 
       <main>
-        <Loader></Loader> 
-        <Streak streak="1"/>
+        {/* <Loader></Loader>  */}
+        {/* <Streak streak="1"/> */}
         <Template>
           <HomeComp/>
         </Template>

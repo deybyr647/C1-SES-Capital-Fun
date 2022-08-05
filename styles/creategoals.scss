@@ -1,0 +1,139 @@
+@import './globalStyles.scss';
+
+.createGoals {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    & > svg {
+        &:nth-of-type(1) {
+            position: absolute;
+            z-index: 1;
+            bottom: 0px;
+            left: -300px;
+            width: 200%;
+            height: 10%;
+        }
+        &:nth-of-type(2) {
+            position: absolute;
+            z-index: 1;
+            bottom: 0px;
+            height: 20%;
+            left: -350px;
+            width: 200%;
+        }
+        &:last-of-type {
+            position: absolute;
+            z-index: 1;
+            bottom: 0px;
+            height: 10%;
+            left: -350px;
+            width: 200%;
+        }
+    }
+    & > section {
+        text-align: center;
+        width: 60rem;
+        margin: auto;
+        margin-top: 2rem;
+        max-width: 80%;
+        z-index: 10;
+        box-shadow: 0px 10px 10px 5px rgba(0, 72, 121, 0.25);
+        height: 40rem;
+        transition: box-shadow ease-out 0.2s;
+        border-radius: 0.5rem;
+        display: grid;
+        place-content: flex-start center;
+        & > div {
+            width: 80rem;
+            max-width: 70%;
+            margin: auto;
+            position: relative;
+            @media screen and (max-width: 1000px) {
+                width: 60rem;
+                max-width: 50%;
+            }
+
+            & > button {
+                margin-top: 2rem;
+                padding: 1rem 0rem;
+                border: solid 3px $primary-color;
+                background-color: $accent-color;
+                color: $primary-color;
+                cursor: pointer;
+                border-radius: 0.5rem;
+                width: 70rem;
+                font-size: 2rem;
+                font-weight: 700;
+                max-width: 60%;
+                transition: all ease-out 0.2s;
+                &:hover {
+                    border: solid 3px $accent-color;
+                    background-color: $primary-color;
+                    color: $accent-color;
+                }
+            }
+
+            &:first-of-type {
+                color: $secondary-color;
+                font-size: 1.5rem;
+                margin-top: 3rem;
+            }
+            & > section {
+                display: grid;
+                place-items: center;
+                margin-top: 2rem;
+            }
+            & > div {
+                width: 60%;
+                display: flex;
+                margin: auto;
+                margin-top: 1rem;
+                & > input {
+                    flex: 5;
+                    padding: 1rem;
+                    border-radius: 5px 0px 0px 5px;
+                    font-size: 1.25rem;
+                    color: $accent-color;
+                    border: solid 1px $secondary-color;
+                    &::placeholder {
+                        color: $accent-color;
+                        text-align: left;
+                        vertical-align: middle;
+                        font-size: 1.25rem;
+                    }
+                    :-ms-input-placeholder { /* Internet Explorer 10-11 */
+                        color: $accent-color;
+                        text-align: left;
+                        vertical-align: middle;
+                        font-size: 1.25rem;
+                    }
+                    
+                    ::-ms-input-placeholder { /* Microsoft Edge */
+                        color: $accent-color;
+                        text-align: left;
+                        vertical-align: middle;
+                        font-size: 1.25rem;
+                    }
+                }
+                & > div {
+                    background-color: $accent-color;
+                    transform: translateX(-2px);
+                    flex: 1;
+                    display: grid;
+                    border-radius: 0px 5px 5px 0px;
+                    place-items: center;
+                    border: solid 1px $secondary-color;
+                    transition: all ease-out 0.2s;
+                    &:hover {
+                        background-color: $primary-color;
+                        & > svg {
+                            fill: $accent-color;
+                            stroke: $accent-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

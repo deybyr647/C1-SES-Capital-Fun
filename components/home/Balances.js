@@ -24,7 +24,7 @@ function Balance () {
           <h3> $</h3>
         </section>
         <section>
-          <h1> 100,000</h1>
+          <h1> 1200.75</h1>
         </section>
       </section>
       <section>

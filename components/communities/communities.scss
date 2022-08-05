@@ -2,23 +2,19 @@
 
 .communities-container {
     background-color: $primary-color;
-    font-size: 3rem;
+    font-size: 2rem;
     color: $secondary-color;
-    margin-left: 2rem;
-    margin-right: 2rem;
-    margin-top: 2.5rem;
-    margin-bottom: 2.5rem;
+    width: 100%;
     .community {
         box-shadow: 0px 10px 10px 5px rgba(0, 72, 121, 0.25);
         cursor: pointer;
         border-radius: 0.25rem;
         text-indent: 3rem;
         padding-top: 1.5rem;
-        width: 70vw;
+        width: 50rem;
+        max-width: 80%;
         padding-bottom: 1.5rem;
-        margin-top: 2.5rem;
-        margin-bottom: 2.5rem;
-        margin: 2.5rem auto;
+        margin: 2rem auto;
         transition: all ease-out 0.2s;
         &:hover {
             box-shadow: 0px 10px 10px 5px rgba(255, 0, 55, 0.45);
@@ -43,6 +39,9 @@
 @media screen and (max-width:1000px) {
     .communities-container {
         font-size: 1.5rem;
+        .community {
+          text-indent: 1rem;
+        }
     }
 }
 

@@ -19,6 +19,9 @@
 
   h3 {
     color: $secondary-color;
+    span {
+      color: $accent-color;
+    }
   }
 
   >div {
