@@ -67,6 +67,7 @@
   }
 
   .transactions {
+    position: relative;
     width: 40rem;
     border-radius: 0.25rem;
     height: 23rem;
@@ -123,6 +124,26 @@
         }
       }
     }
+
+    button {
+      position: absolute;
+      background: $primary-color;
+      color: $secondary-color;
+      font-size: 1rem;
+      font-weight: bold;
+      padding: 0.5rem 1rem;
+      border: 2px solid $secondary-color;
+      border-radius: 4px;
+      bottom: 1rem;
+      transform: translate(-50%, 0); 
+    }
+    
+    button:hover {
+      cursor: pointer;
+      background: $secondary-color;
+      color: $primary-color;
+    }
+
   }
 
 

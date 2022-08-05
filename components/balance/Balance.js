@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { MdSend, MdChangeCircle, MdMoreHoriz, MdTimer} from 'react-icons/md'
+import MissionComplete from '../modals/MissionComplete'
 
 
 const financeInfo = {
@@ -10,8 +11,17 @@ const financeInfo = {
 }
 
 function Balance() {
+
+  const [showModal, setShowModal] = useState(false)
+
+  const handleAddMoney = () => {
+    financeInfo.balance += 100
+    setShowModal(true)
+  }
+
   return (
     <div className="balance-details">
+      <MissionComplete showModal={showModal} setShowModal={setShowModal}/>
       <div className="account-number">
         <div>Account Number:</div>
         <div>{financeInfo.accountNumber}</div>
@@ -61,6 +71,7 @@ function Balance() {
           </div>
         </div>
 
+        <button onClick={handleAddMoney}>Artificially Add $100</button>
       </div>
     </div>
   )

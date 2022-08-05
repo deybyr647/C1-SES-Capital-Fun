@@ -3,15 +3,20 @@ import ModalBase from './ModalBase'
 
 
 const missionReference = {
-  description: 'Save 150 dollars',
-  points: 300,
-  tier: 'Platinum'
+  description: 'Save 100 dollars',
+  points: 100,
+  tier: 'Silver'
 }
 
 const url = "https://www.google.com/search?q=mission+complete&source=lnms&tbm=isch&sa=X&ved=2ahUKEwiTtay8hK_5AhUwhIkEHfVkB58Q_AUoAXoECAEQAw&biw=1440&bih=736&dpr=2#imgrc=pvfHGXbolsGAxM"
-function MissionComplete() {
+function MissionComplete({showModal, setShowModal}) {
   return (
-    <ModalBase title={"Mission Complete"} shareLink={"http://www.facebook.com/share.php?u=" + url}>
+    <ModalBase 
+      title={"Mission Complete"}
+      shareLink={"http://www.facebook.com/share.php?u=" + url}
+      showModal={showModal}
+      setShowModal={setShowModal}
+    >
       <div className="mission-complete">
         <div>
           <h2>Mission Details:</h2>
