@@ -104,6 +104,7 @@
 
         .continue-button {
           width: 70%;
+          min-width: 300px;
           color: $primary-color;
           font-size: 1.5rem;
           font-weight: bold;
@@ -215,5 +216,59 @@
           }
       }
     }
+  }
+}
+
+.createCommunity {
+  width: 100%;
+  margin-top: 2rem;
+  & > div {
+      display: flex;
+      margin: auto;
+      margin-top: 1rem;
+      & > input {
+          flex: 5;
+          padding: 1rem;
+          border-radius: 5px 0px 0px 5px;
+          font-size: 1.25rem;
+          color: $accent-color;
+          border: solid 1px $secondary-color;
+          &::placeholder {
+              color: $accent-color;
+              text-align: left;
+              vertical-align: middle;
+              font-size: 1.25rem;
+          }
+          :-ms-input-placeholder { /* Internet Explorer 10-11 */
+              color: $accent-color;
+              text-align: left;
+              vertical-align: middle;
+              font-size: 1.25rem;
+          }
+          
+          ::-ms-input-placeholder { /* Microsoft Edge */
+              color: $accent-color;
+              text-align: left;
+              vertical-align: middle;
+              font-size: 1.25rem;
+          }
+      }
+      & > div {
+          background-color: $accent-color;
+          transform: translateX(-2px);
+          flex: 1;
+          display: grid;
+          border-radius: 0px 5px 5px 0px;
+          place-items: center;
+          border: solid 1px $secondary-color;
+          transition: all ease-out 0.2s;
+          &:hover {
+              background-color: $primary-color;
+              & > svg {
+                  fill: $accent-color;
+                  stroke: $accent-color;
+              }
+          }
+      }
   }
 }
