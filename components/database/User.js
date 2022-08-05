@@ -21,7 +21,7 @@ class User {
 
     generateCommunitiesList() {
         const communities = new Array(5);
-        communities.fill(undefined);
+        communities.fill(null);
         Object.seal(communities);
         return communities;
     }
@@ -62,6 +62,23 @@ class User {
     generateTimestamp() {
         let timestamp = Date.now();
         return new Date(timestamp).toString();
+    }
+
+    static toFirestore(user) {
+        return {
+            name: {
+                first: user.name.first,
+                last: user.name.last
+            },
+            email: user.email,
+            financeGoal: user.financeGoal,
+            streak: user.streak,
+            totalPoints: user.totalPoints,
+            communities: user.communities,
+            missions: user.missions,
+            financeInfo: user.financeInfo,
+            lastLogin: user.lastLogin
+        }
     }
 }
 
