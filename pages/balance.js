@@ -14,7 +14,6 @@ export default function balance() {
       </Head>
 
       <main>
-        <Loader></Loader> 
         <Template>
             <Balance/>
         </Template>

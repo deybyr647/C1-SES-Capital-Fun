@@ -6,6 +6,7 @@ import '../components/missions/missions.css'
 import '../components/home/goals.css'
 import '../components/balance/balance.css'
 import '../components/communities/community.css'
+import '../components/home/balance.css'
 import '../styles/login.css'
 import '../styles/signup.css'
 
