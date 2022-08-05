@@ -1,4 +1,4 @@
-import firestore from './FirebaseConfig';
+import { firestore } from './FirebaseConfig';
 import User from "./User";
 
 const getUsers = async () => {

@@ -12,9 +12,15 @@ import '../styles/signup.css'
 import '../components/communities/communities.css'
 import '../components/modals/modals.css'
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+import { AuthUserProvider } from '../components/database/AuthProvider';
+
+function MyApp({ Component, pageProps}) {
+  return (
+      <AuthUserProvider>
+        <Component {...pageProps} />
+      </AuthUserProvider>
+  )
 }
 
-export default MyApp
+export default MyApp;
 

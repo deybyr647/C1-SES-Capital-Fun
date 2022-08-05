@@ -1,5 +1,5 @@
 import { random } from "./Util";
-import firestore from "./FirebaseConfig";
+import { firestore } from "./FirebaseConfig";
 
 class Mission {
     static types = ["Silver", "Platinum"];
