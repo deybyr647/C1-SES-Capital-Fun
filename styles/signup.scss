@@ -10,7 +10,7 @@
         min-height: 100vh;
         &:first-of-type{
             flex: 4;
-            min-width: 300px;
+            min-width: 30rem;
             display: grid;
             place-items: center;
             & > section {
@@ -122,12 +122,13 @@
         }
         &:last-of-type {
             flex: 2;
-            min-width: 300px;
+            min-width: 30rem;
             background-color: $secondary-color;
             position: relative;
             overflow: hidden;
             display: grid;
-            place-items: center;
+            place-items: flex-start center;
+            padding-top: 8rem;
             & > section {
                 color: $primary-color;
                 z-index: 5;
@@ -136,10 +137,7 @@
                 min-width: 250px;
                 & > h2 {
                     font-size: 3rem;
-                }
-                & > h3 {
-                    padding-top: 1rem;
-
+                    padding-bottom: 0;
                 }
             }
             & > svg {

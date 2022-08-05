@@ -114,7 +114,7 @@ export default function Signup() {
           <section>
             {/* Content */}
             <h2> Capital Fun</h2>
-            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, nostrum, ad pariatur consequatur modi placeat excepturi adipisci dolores officiis labore non. Totam dicta aperiam facere dolores placeat maiores laborum consequatur!</h3>
+            <h3>CapitalFun is hackathon project created by Anish Tenepalli, Deyby Rodriguez, Eric Shau, Hou Chi Chan, Kheshav Kumar, Kunal Mohindra, Liam Forges, Vincent Cai to CHANGE banking for GOOD. The application is intended to address financial illiteracy across America, and in college students specifically, by "gamifying" banking. Features include streaks, missions, and communities systems that reward or encourage good financial decisions.</h3>
           </section>
         </section>
       </main>
