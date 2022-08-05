@@ -2,7 +2,41 @@ import Head from 'next/head';
 import Image from 'next/image';
 import styles from '../styles/Home.module.scss';
 
+import { useState } from 'react';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+
+import { useAuth } from '../components/database/AuthProvider';
+
 export default function Login() {
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [error, setError] = useState(null);
+    const router = useRouter();
+    const { signInWithEmailAndPassword } = useAuth();
+
+    const emailOnChange = (e) => {
+        setEmail(e.target.value);
+        console.log(email);
+    }
+
+    const passwordOnChange = (e) => {
+        setPassword(e.target.value);
+        console.log(password);
+    }
+
+    const onSubmit = (e) => {
+        setError(null)
+        signInWithEmailAndPassword(email, password)
+            .then(authUser => {
+                router.push('/');
+            })
+            .catch(error => {
+                setError(error.message)
+            });
+        e.preventDefault();
+    };
+
   return (
     <div>
       <Head>
@@ -24,21 +58,21 @@ export default function Login() {
               <h1> Capital <span>Fun </span></h1>
               <div> 
                 <input type="text" id="name" name="name" required
-                       minLength="4" maxLength="50" size="10" placeholder='Enter Email'></input>  
+                       minLength="4" maxLength="50" size="10" placeholder='Enter Email' onChange={emailOnChange} value={email}></input>
                  <div>
                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.822 18.096c-3.439-.794-6.64-1.49-5.09-4.418 4.72-8.912 1.251-13.678-3.732-13.678-5.082 0-8.464 4.949-3.732 13.678 1.597 2.945-1.725 3.641-5.09 4.418-3.073.71-3.188 2.236-3.178 4.904l.004 1h23.99l.004-.969c.012-2.688-.092-4.222-3.176-4.935z"/></svg>
                  </div>
               </div>
               <div> 
                 <input type="password" id="name" name="name" required
-                       minLength="4" maxLength="50" size="10" placeholder='Enter password'></input>  
+                       minLength="4" maxLength="50" size="10" placeholder='Enter password' onChange={passwordOnChange} value={password}></input>
                  <div>
                     <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fillRule="evenodd" clipRule="evenodd"><path d="M12.804 9c1.038-1.793 2.977-3 5.196-3 3.311 0 6 2.689 6 6s-2.689 6-6 6c-2.219 0-4.158-1.207-5.196-3h-3.804l-1.506-1.503-1.494 1.503-1.48-1.503-1.52 1.503-3-3.032 2.53-2.968h10.274zm7.696 1.5c.828 0 1.5.672 1.5 1.5s-.672 1.5-1.5 1.5-1.5-.672-1.5-1.5.672-1.5 1.5-1.5z"/></svg>
                  </div>
               </div>
             </div>
             <div> 
-              <button onClick={() => {window.location.href="/"}}>Login</button>
+              <button onClick={onSubmit}>Login</button>
               <h3 onClick={() => {
                 window.location.href = '/signup'
               }}> Don't have an account? Sign Up now</h3>
