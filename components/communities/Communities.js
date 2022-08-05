@@ -22,7 +22,7 @@ function Communities() {
   return (
     <div className = "communities-container">
       {communities.map((community, i) => 
-        <div className="community">
+        <div key={i} className="community">
           <RiGroup2Fill className='icon'/>
           {" "+community.name}
           {/* <HiOutlineDotsVertical className = "menu"/> */}
