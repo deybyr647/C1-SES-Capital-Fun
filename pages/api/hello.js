@@ -7,7 +7,10 @@ const handler = async (req, res) => {
   const data = await getUsers();
   //console.log(data);
   let deyby = new User({first: "Deyby", last: "Rodriguez"}, "deybyr647@gmail.com", "Save 4 Retirement");
-  console.log(deyby);
+
+  setTimeout(() => {
+    console.log(deyby);
+  }, 2000)
 
   res.status(200).json(...data);
 }
