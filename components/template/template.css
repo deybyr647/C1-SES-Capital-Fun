@@ -16,6 +16,17 @@
   border-right: 0.01px solid rgba(0, 0, 0, 0.075);
 }
 
+@media only screen and (max-width: 600px) {
+  .navbar-opened {
+    position: fixed;
+    z-index: 100;
+  }
+  .component-blur {
+    opacity: 0.7;
+    filter: brightness(40%);
+    backdrop-filter: blur(80px);
+  }
+}
 .navbar-opened {
   width: 18rem;
 }

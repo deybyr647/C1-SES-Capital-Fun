@@ -15,7 +15,7 @@ function Template({children}) {
         <Navbar closeMenu={() => setMenuOpened(false)}/> : 
         <NavbarClosed openMenu={() => setMenuOpened(true)}/>
       } */}
-      <div className="component">
+      <div className={menuOpened ? "component component-blur" : "component"} >
         {children}
       </div>
     </div>
