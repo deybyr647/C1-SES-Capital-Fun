@@ -16,37 +16,38 @@ class User {
         this.communities = this.generateCommunitiesList();
         this.missions = this.generateMissionList();
         this.financeInfo = this.generateFinanceInfo();
+        this.lastLogin = this.generateTimestamp();
     }
 
-    generateCommunitiesList(){
+    generateCommunitiesList() {
         const communities = new Array(5);
         communities.fill(undefined);
         Object.seal(communities);
         return communities;
     }
 
-    async generateMissionList() {
+    generateMissionList() {
         const missionCollection = firestore.collection("missions");
-        const userMissionList = [];
+        let userMissionList = [];
 
-        try {
-            const allMissions = await missionCollection.get();
+        missionCollection.get()
+            .then(snapshot => {
+                snapshot.forEach(mission => {
+                    let userMission = {
+                        isComplete: false,
+                        missionRef: `/missions/${mission.id}`
+                    }
 
-            for(const mission of allMissions.docs){
-                let userMission = {
-                    isComplete: false,
-                    missionRef: `/missions/${mission.id}`
-                }
+                    userMissionList.push(userMission);
+                })
 
-                userMissionList.push(userMission);
-            }
+                //console.log(userMissionList);
+            })
+            .catch(error => {
+                console.error("An error occurred...", error);
+            });
 
-            return userMissionList;
-
-        } catch(err){
-            console.error(err);
-            return [];
-        }
+        return userMissionList;
     }
 
     generateFinanceInfo() {
@@ -56,6 +57,11 @@ class User {
             creditScore: random(300, 850),
             type: User.types[random(0, User.types.length - 1)]
         };
+    }
+
+    generateTimestamp() {
+        let timestamp = Date.now();
+        return new Date(timestamp).toString();
     }
 }
 
