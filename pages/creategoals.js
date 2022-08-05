@@ -43,7 +43,9 @@ export default function CreateGoals() {
               </div>
 
               <div>
-                <button> Create </button>
+                <button onClick={() => {
+                  window.location.href = "/missions"
+                }}> Create </button>
               </div>
             </section>
             <svg xmlns="http://www.w3.org/2000/svg" width="664" height="256" viewBox="0 0 664 256" fill="none">
