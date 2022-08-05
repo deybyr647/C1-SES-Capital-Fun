@@ -1,10 +1,11 @@
+import React from 'react'
 import Head from 'next/head'
 import Template from '../components/template/Template'
-import Missions from '../components/missions/Missions'
+import Communities from '../components/communities/Communities'
 
-export default function Home() {
+export default function CommunitiesPage() {
 
-  return (
+    return (
     <div>
       <Head>
         <title>Create Next App</title>
@@ -14,11 +15,12 @@ export default function Home() {
 
       <main>
         <Template>
-            <Missions/>
+          <Communities/>
         </Template>
       </main>
     </div>
-  )
-}
-
-
+    )
+  }
+  
+  
+  

@@ -34,8 +34,8 @@ function Navbar({menuOpened, toggleMenu}) {
         <div className="links">
           <ul>
             <li><MdHome/><h2><a href="/">Home</a></h2></li>
-            <li><MdGroups/><h2><a href="/communitiesHome">Communities</a></h2></li>
-            <li><MdStars/><h2><a href="/missionHome">Missions</a></h2></li>
+            <li><MdGroups/><h2><a href="/communities">Communities</a></h2></li>
+            <li><MdStars/><h2><a href="/missions">Missions</a></h2></li>
             <li><MdSettings/><h2><a href="/creategoals">Create Post</a></h2></li>
           </ul>
         </div>
