@@ -90,6 +90,7 @@
 }
 .modal-background .modal > div .button-group .continue-button {
   width: 70%;
+  min-width: 300px;
   color: #FFFFFF;
   font-size: 1.5rem;
   font-weight: bold;
@@ -125,6 +126,59 @@
 }
 .mission-complete > div ul li {
   font-size: 1.2rem;
+}
+
+.createCommunity {
+  width: 100%;
+  margin-top: 2rem;
+}
+.createCommunity > div {
+  display: flex;
+  margin: auto;
+  margin-top: 1rem;
+}
+.createCommunity > div > input {
+  flex: 5;
+  padding: 1rem;
+  border-radius: 5px 0px 0px 5px;
+  font-size: 1.25rem;
+  color: #D22E1E;
+  border: solid 1px #004879;
+}
+.createCommunity > div > input::placeholder {
+  color: #D22E1E;
+  text-align: left;
+  vertical-align: middle;
+  font-size: 1.25rem;
+}
+.createCommunity > div > input :-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #D22E1E;
+  text-align: left;
+  vertical-align: middle;
+  font-size: 1.25rem;
+}
+.createCommunity > div > input ::-ms-input-placeholder { /* Microsoft Edge */
+  color: #D22E1E;
+  text-align: left;
+  vertical-align: middle;
+  font-size: 1.25rem;
+}
+.createCommunity > div > div {
+  background-color: #D22E1E;
+  transform: translateX(-2px);
+  flex: 1;
+  display: grid;
+  border-radius: 0px 5px 5px 0px;
+  place-items: center;
+  border: solid 1px #004879;
+  transition: all ease-out 0.2s;
+}
+.createCommunity > div > div:hover {
+  background-color: #FFFFFF;
+}
+.createCommunity > div > div:hover > svg {
+  fill: #D22E1E;
+  stroke: #D22E1E;
 }
 
 /*# sourceMappingURL=modals.css.map */
