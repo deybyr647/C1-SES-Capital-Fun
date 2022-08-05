@@ -1,0 +1,108 @@
+.createGoals {
+  width: 100%;
+}
+.createGoals > section {
+  text-align: center;
+  width: 60rem;
+  margin: auto;
+  margin-top: 5rem;
+  max-width: 80%;
+  box-shadow: 0px 10px 10px 5px rgba(0, 72, 121, 0.25);
+  height: 45rem;
+  transition: box-shadow ease-out 0.2s;
+  border-radius: 0.5rem;
+  display: grid;
+  place-content: flex-start center;
+}
+.createGoals > section > div {
+  width: 80rem;
+  max-width: 70%;
+  margin: auto;
+  position: relative;
+}
+@media screen and (max-width: 1000px) {
+  .createGoals > section > div {
+    width: 60rem;
+    max-width: 50%;
+  }
+}
+.createGoals > section > div > button {
+  margin-top: 2rem;
+  padding: 1rem 0rem;
+  border: solid 3px #FFFFFF;
+  background-color: #D22E1E;
+  color: #FFFFFF;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  width: 70rem;
+  font-size: 2rem;
+  font-weight: 700;
+  max-width: 60%;
+  transition: all ease-out 0.2s;
+}
+.createGoals > section > div > button:hover {
+  border: solid 3px #D22E1E;
+  background-color: #FFFFFF;
+  color: #D22E1E;
+}
+.createGoals > section > div:first-of-type {
+  color: #004879;
+  font-size: 1.5rem;
+  margin-top: 3rem;
+}
+.createGoals > section > div > section {
+  display: grid;
+  place-items: center;
+  margin-top: 2rem;
+}
+.createGoals > section > div > div {
+  width: 60%;
+  display: flex;
+  margin: auto;
+  margin-top: 1rem;
+}
+.createGoals > section > div > div > input {
+  flex: 5;
+  padding: 1rem;
+  border-radius: 5px 0px 0px 5px;
+  font-size: 1.25rem;
+  color: #D22E1E;
+  border: solid 1px #004879;
+}
+.createGoals > section > div > div > input::placeholder {
+  color: #D22E1E;
+  text-align: left;
+  vertical-align: middle;
+  font-size: 1.25rem;
+}
+.createGoals > section > div > div > input :-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #D22E1E;
+  text-align: left;
+  vertical-align: middle;
+  font-size: 1.25rem;
+}
+.createGoals > section > div > div > input ::-ms-input-placeholder { /* Microsoft Edge */
+  color: #D22E1E;
+  text-align: left;
+  vertical-align: middle;
+  font-size: 1.25rem;
+}
+.createGoals > section > div > div > div {
+  background-color: #D22E1E;
+  transform: translateX(-2px);
+  flex: 1;
+  display: grid;
+  border-radius: 0px 5px 5px 0px;
+  place-items: center;
+  border: solid 1px #004879;
+  transition: all ease-out 0.2s;
+}
+.createGoals > section > div > div > div:hover {
+  background-color: #FFFFFF;
+}
+.createGoals > section > div > div > div:hover > svg {
+  fill: #D22E1E;
+  stroke: #D22E1E;
+}
+
+/*# sourceMappingURL=creategoals.css.map */
