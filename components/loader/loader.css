@@ -1,0 +1,63 @@
+.loader {
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background-color: #004879;
+  color: #FFFFFF;
+  left: 0;
+  top: 0;
+  display: grid;
+  place-content: center;
+  transition: all ease-out 1.5s;
+}
+.loader > section {
+  display: flex;
+  flex-direction: column;
+}
+.loader > section > div {
+  flex: 1;
+}
+.loader > section > div:first-of-type {
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+.loader > section > div > h1 {
+  position: relative;
+  font-size: 2rem;
+  text-align: center;
+}
+.loader > section > div > h1::before {
+  content: " ";
+  position: absolute;
+  padding: 2px 4rem;
+  right: 75%;
+  top: calc(50% - 1px);
+  background-color: #FFFFFF;
+}
+.loader > section > div > h1::after {
+  content: " ";
+  position: absolute;
+  padding: 2px 4rem;
+  left: 75%;
+  top: calc(50% - 1px);
+  background-color: #FFFFFF;
+}
+
+svg {
+  fill: #FFFFFF;
+  stroke: #FFFFFF;
+}
+
+.inside-1 {
+  position: absolute;
+  bottom: 0;
+}
+
+.inside-2 {
+  position: absolute;
+  bottom: -100px;
+}
+
+/*# sourceMappingURL=loader.css.map */

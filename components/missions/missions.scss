@@ -1,0 +1,103 @@
+@import "../../styles/globalStyles.scss";
+
+.container {
+  // padding-top: 2rem;
+}
+
+.missions {
+  margin: 2rem auto 4rem auto;
+  width: 50rem;
+  max-width: 95%;
+  text-align: center;
+  box-shadow: 0px 10px 10px 5px rgba(0, 72, 121, 0.25);
+  padding-top: 0.1px;
+  padding-bottom: 3rem;
+  
+  h1 {
+    color: $accent-color;
+  }
+
+  h3 {
+    color: $secondary-color;
+  }
+
+  >div {
+    width: 100%;
+    height: 20rem;
+  }
+
+  ul {
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    padding-left: 0;
+    overflow-y: auto;
+
+    > :not(.completed)::before {
+      content:"";
+      width:100%;
+      height:5px;
+      left:0;
+      bottom: 0;
+      position:absolute;
+      background:linear-gradient(to right, $accent-color 80%, $secondary-color 50%);
+      border-radius: 8px;
+    }
+  }
+
+  li {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    width: 40rem;
+    height: 4.5rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 7px;
+    max-width: 80%;
+
+    display: flex;
+    align-items: center;
+    padding-left: 2rem;
+    margin-bottom: 1rem;    
+
+    .percentComplete {
+      font-size: 0.7rem;
+      font-weight: bold;
+      right: 2rem;
+      text-align: left;
+  
+      :first-child {
+        width: 2rem;
+        color: $accent-color;
+        position: absolute;
+        right: 1.2rem;
+        bottom: 1.4rem;
+      }
+  
+      :nth-child(2) {
+        color: $secondary-color;
+        position: absolute;
+        right: 1.9rem;
+        bottom: 1.4rem;
+      }
+  
+      :last-child {
+        width: 2rem;
+        color: $secondary-color;
+        position: absolute;
+        right: 1.2rem;
+        bottom: 0.5rem;
+      }
+    }
+  }
+
+  .completed {
+    opacity: 0.7;
+    filter: grayscale(30%);
+
+    span{
+      right: 2rem !important;
+    }
+  }
+
+}

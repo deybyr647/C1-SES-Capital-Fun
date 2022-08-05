@@ -1,0 +1,77 @@
+@import '../../styles/globalStyles.scss';
+
+.balanceWrapper {
+    display: grid;
+    place-content: center;
+    margin: auto;
+    max-width: 100vw;
+}
+
+.balanceContent{
+    margin: 3rem 0rem;
+    cursor: pointer;
+    width: 70vw;
+    padding: 8rem 4rem;
+    background-color: $secondary-color;
+    color: $primary-color;
+    position: relative;
+    box-shadow: 0px 10px 10px 5px rgba(0, 72, 121, 0.25);
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow ease-out 0.2s;
+    overflow: hidden;
+    & > svg {
+        &:nth-of-type(1) {
+            position: absolute;
+            bottom: 0px;
+            left: -150px;
+            width: 200%;
+            height: 30%;
+            z-index: 2;
+        }
+        &:nth-of-type(2) {
+            position: absolute;
+            bottom: 0px;
+            height: 80%;
+            z-index: 1;
+            left: 0px;
+            width: 200%;
+        }
+    }
+    &:hover {
+        box-shadow: 0px 10px 10px 5px rgba(255, 0, 55, 0.45);
+    }
+    & > section {
+        z-index: 5;
+        &:first-of-type {
+            display: flex;
+            & > section {
+                & > h3 {
+                    font-size: 1rem;
+                    margin: 0px;
+                }
+                & > h1 {
+                    margin: 0px;
+                    font-size: 4rem;
+                }
+            }
+        }
+        &:last-of-type {
+            & > section {
+                & > h2 {
+                    margin: 0px;
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 800px) {
+    .balanceContent {
+        width: 70vw;
+        padding: 4rem 2rem;
+    }
+}

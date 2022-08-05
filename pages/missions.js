@@ -1,14 +1,8 @@
 import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.scss'
 import Template from '../components/template/Template'
-import Loader from '../components/loader/Loader'
-import HomeComp from '../components/home/Home'
 import Missions from '../components/missions/Missions'
-import MissionComplete from '../components/modals/MissionComplete'
-import Streak from '../components/streak/Streak'
 
-export default function Home() {
+export default function Mission() {
 
   return (
     <div>
@@ -19,10 +13,8 @@ export default function Home() {
       </Head>
 
       <main>
-        <Loader></Loader> 
-        <Streak streak="1"/>
         <Template>
-          <HomeComp/>
+            <Missions/>
         </Template>
       </main>
     </div>

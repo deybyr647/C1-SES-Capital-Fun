@@ -1,0 +1,57 @@
+.communityWrapper {
+  display: grid;
+  place-items: center;
+  margin-top: 2rem;
+}
+.communityWrapper > div {
+  width: 70vw;
+  box-shadow: 0px 10px 10px 5px rgba(0, 72, 121, 0.25);
+  border-radius: 0.25rem;
+  padding: 1.5rem 3rem;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  min-width: 300px;
+  transition: box-shadow ease-out 0.2s;
+}
+.communityWrapper > div:hover {
+  box-shadow: 0px 10px 10px 5px rgba(255, 0, 55, 0.45);
+}
+.communityWrapper > div::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  background-color: #D22E1E;
+  padding: 100% 5px;
+}
+.communityWrapper > div > div > h2 {
+  font-size: 2rem;
+  color: #004879;
+}
+.communityWrapper > div > div:first-of-type {
+  flex: 1;
+}
+.communityWrapper > div > div:first-of-type > h2 {
+  color: #D22E1E;
+}
+.communityWrapper > div > div:nth-of-type(2) {
+  flex: 5;
+}
+.communityWrapper > div > div:last-of-type {
+  flex: 1;
+}
+
+.blue > div::before {
+  background-color: #004879;
+}
+
+@media screen and (max-width: 800px) {
+  .communityWrapper > div > div > h2 {
+    font-size: 1.25rem;
+  }
+}
+
+/*# sourceMappingURL=community.css.map */

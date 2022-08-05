@@ -1,0 +1,88 @@
+.streak {
+  position: absolute;
+  width: 100vw;
+  z-index: 10;
+  background-color: #004879;
+  left: 0px;
+  top: -200%;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  transition: all ease-out 1s;
+}
+.streak > section {
+  text-align: center;
+}
+.streak > section > h1 {
+  color: #FFFFFF;
+  font-size: 2rem;
+  margin: 0px;
+}
+.streak > section > section:first-of-type {
+  min-width: 350px;
+  margin-top: 2rem;
+  width: 60vw;
+  height: 300px;
+  border-radius: 5px;
+  border: solid 3px #FFFFFF;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+}
+.streak > section > section:first-of-type > div {
+  flex: 1;
+  min-width: 75px;
+  max-width: 100px;
+}
+.streak > section > section:first-of-type > div > h1 {
+  color: #FFFFFF;
+  margin: 0px;
+  font-size: 2rem;
+}
+.streak > section > section:last-of-type {
+  min-width: 350px;
+  margin-top: 2rem;
+  width: 60vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.streak > section > section:last-of-type > button {
+  height: 10vh;
+  padding: 0.25rem 0rem;
+  background-color: #004879;
+  color: #FFFFFF;
+  border: solid 3px #FFFFFF;
+  border-radius: 0.25rem;
+  transition: all ease-out 0.25s;
+  cursor: pointer;
+}
+.streak > section > section:last-of-type > button:first-of-type {
+  flex: 1;
+  margin-right: 1rem;
+}
+.streak > section > section:last-of-type > button:first-of-type > svg {
+  stroke: #FFFFFF;
+}
+.streak > section > section:last-of-type > button:last-of-type {
+  flex: 6;
+  font-size: 3rem;
+  font-weight: 600;
+}
+.streak > section > section:last-of-type > button:hover {
+  color: #004879;
+  background-color: #FFFFFF;
+}
+.streak > section > section:last-of-type > button:hover > svg {
+  fill: #004879;
+  stroke: #004879;
+}
+
+.red {
+  fill: #D22E1E;
+  stroke: #FFFFFF;
+}
+
+/*# sourceMappingURL=streak.css.map */
