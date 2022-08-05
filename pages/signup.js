@@ -28,7 +28,7 @@ export default function signup() {
               </div>
               
               <div> 
-                <input type="text" id="name" name="name" required
+                <input type="password" id="name" name="name" required
                  minlength="4" maxlength="8" size="10" placeholder='Enter Password'></input>  
                  <div>
                     <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12.804 9c1.038-1.793 2.977-3 5.196-3 3.311 0 6 2.689 6 6s-2.689 6-6 6c-2.219 0-4.158-1.207-5.196-3h-3.804l-1.506-1.503-1.494 1.503-1.48-1.503-1.52 1.503-3-3.032 2.53-2.968h10.274zm7.696 1.5c.828 0 1.5.672 1.5 1.5s-.672 1.5-1.5 1.5-1.5-.672-1.5-1.5.672-1.5 1.5-1.5z"/></svg>
@@ -37,16 +37,20 @@ export default function signup() {
 
               {/* Account Type */}
               <div> 
-                <input type="text" id="name" name="name" required
-                 minlength="4" maxlength="8" size="10" placeholder='Enter Email'></input>  
+                <input type="password" id="name" name="name" required
+                 minlength="4" maxlength="8" size="10" placeholder='Re-Enter password'></input>  
                  <div>
                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.822 18.096c-3.439-.794-6.64-1.49-5.09-4.418 4.72-8.912 1.251-13.678-3.732-13.678-5.082 0-8.464 4.949-3.732 13.678 1.597 2.945-1.725 3.641-5.09 4.418-3.073.71-3.188 2.236-3.178 4.904l.004 1h23.99l.004-.969c.012-2.688-.092-4.222-3.176-4.935z"/></svg>
                  </div>
               </div>
             </div>
             <div> 
-              <button> Login</button>
-              <h3> Don't have an account? Sign Up now</h3>
+              <button onClick={() => {
+                window.location.href = "/"
+              }}> Login</button>
+              <h3 onClick={() => {
+                window.location.href = "/login"
+              }}> Don't have an account? Sign Up now</h3>
             </div>
           </section>
         </section>
