@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react'
 import {FaFacebookF} from 'react-icons/fa'
 
-function ModalBase({children, title, hasShare}) {
+function ModalBase({children, title, shareLink}) {
 
   const [showModal, setShowModal] = useState(true)
   const ref = useRef()
@@ -29,8 +29,8 @@ function ModalBase({children, title, hasShare}) {
           <h1>{title}</h1>
           {children}
           <div className="button-group">
-            {hasShare && <button className="facebook-button"><FaFacebookF/></button>}
-            <button className="continue-button">Continue</button>
+            {shareLink && <button onClick={()=>window.open(shareLink, '_blank')} className="facebook-button"><FaFacebookF/></button>}
+            <button onClick={closeModal} className="continue-button">Continue</button>
           </div>
         </div>
       </div>

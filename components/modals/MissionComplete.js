@@ -8,9 +8,10 @@ const missionReference = {
   tier: 'Platinum'
 }
 
+const url = "https://www.google.com/search?q=mission+complete&source=lnms&tbm=isch&sa=X&ved=2ahUKEwiTtay8hK_5AhUwhIkEHfVkB58Q_AUoAXoECAEQAw&biw=1440&bih=736&dpr=2#imgrc=pvfHGXbolsGAxM"
 function MissionComplete() {
   return (
-    <ModalBase title={"Mission Complete"} hasShare={true}>
+    <ModalBase title={"Mission Complete"} shareLink={"http://www.facebook.com/share.php?u=" + url}>
       <div className="mission-complete">
         <div>
           <h2>Mission Details:</h2>
