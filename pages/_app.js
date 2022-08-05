@@ -14,9 +14,15 @@ import '../components/modals/modals.css'
 import '../styles/creategoals.css'
 import 'react-calendar/dist/Calendar.css';
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+import { AuthUserProvider } from '../components/database/AuthProvider';
+
+function MyApp({ Component, pageProps}) {
+  return (
+      <AuthUserProvider>
+        <Component {...pageProps} />
+      </AuthUserProvider>
+  )
 }
 
-export default MyApp
+export default MyApp;
 
