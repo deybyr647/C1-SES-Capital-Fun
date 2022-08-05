@@ -9,6 +9,7 @@ import '../components/communities/community.css'
 import '../components/home/balance.css'
 import '../styles/login.css'
 import '../styles/signup.css'
+import '../components/communities/communities.css'
 
 
 function MyApp({ Component, pageProps }) {
