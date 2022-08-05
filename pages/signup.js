@@ -45,7 +45,9 @@ export default function signup() {
               </div>
             </div>
             <div> 
-              <button> Login</button>
+              <button onClick={() => {
+                window.location.href = "/"
+              }}> Login</button>
               <h3> Don't have an account? Sign Up now</h3>
             </div>
           </section>

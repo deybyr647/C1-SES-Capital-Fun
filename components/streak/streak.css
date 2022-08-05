@@ -57,6 +57,7 @@
   border: solid 3px #FFFFFF;
   border-radius: 0.25rem;
   transition: all ease-out 0.25s;
+  cursor: pointer;
 }
 .streak > section > section:last-of-type > button:first-of-type {
   flex: 1;

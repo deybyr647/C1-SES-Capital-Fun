@@ -2,8 +2,6 @@
   --num1: 54;
   --num2: 14;
   --num3: 48;
-  --num4: 69;
-  --num5: 94;
 }
 
 .goalsWrapper {
@@ -32,7 +30,7 @@
   flex: 1;
   min-width: 250px;
   max-width: 490px;
-  min-height: 50vh;
+  min-height: 40vh;
   box-shadow: 0px 10px 10px 5px rgba(0, 72, 121, 0.25);
   border-radius: 0.5rem;
   margin: 0.5vw;
@@ -104,16 +102,6 @@
 .num3 {
   stroke-dasharray: 625px;
   stroke-dashoffset: calc(625px - 625px * var(--num3) / 100);
-}
-
-.num4 {
-  stroke-dasharray: 625px;
-  stroke-dashoffset: calc(625px - 625px * var(--num4) / 100);
-}
-
-.num5 {
-  stroke-dasharray: 625px;
-  stroke-dashoffset: calc(625px - 625px * var(--num5) / 100);
 }
 
 .card .number {
