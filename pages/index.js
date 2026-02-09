@@ -1,28 +1,36 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.scss'
-import Template from '../components/template/Template'
-import Loader from '../components/loader/Loader'
-import HomeComp from '../components/home/Home'
-import Missions from '../components/missions/Missions'
-import MissionComplete from '../components/modals/MissionComplete'
-import Streak from '../components/streak/Streak'
-import {useAuth} from "../components/database/AuthProvider";
-import {useEffect, useState} from "react";
-import {getUserData} from "../components/database/Util";
+import Head from "next/head";
+import Image from "next/image";
+import styles from "../styles/Home.module.scss";
+import Template from "../components/template/Template";
+import Loader from "../components/loader/Loader";
+import HomeComp from "../components/home/Home";
+import Missions from "../components/missions/Missions";
+import MissionComplete from "../components/modals/MissionComplete";
+import Streak from "../components/streak/Streak";
+import { useAuth } from "../components/database/AuthProvider";
+import { useEffect, useState } from "react";
+import { getUserData } from "../components/database/Util";
 
 export default function Home() {
-    const { authUser } = useAuth();
-    const [userData, setUserData] = useState({});
+  const { authUser } = useAuth();
+  const [userData, setUserData] = useState({});
 
-    useEffect(() => {
-        (async () => {
-            const user = await getUserData(authUser.email);
-            setUserData(user);
-        })();
-    }, [authUser])
+  useEffect(() => {
+    if (!authUser || !authUser.email) return;
 
-    console.log(userData);
+    const fetchData = async () => {
+      try {
+        const user = await getUserData(authUser.email);
+        setUserData(user);
+      } catch (error) {
+        console.error("Error fetching user data:", error);
+      }
+    };
+
+    fetchData();
+  }, [authUser]);
+
+  console.log(userData);
   return (
     <div>
       <Head>
@@ -32,14 +40,12 @@ export default function Home() {
       </Head>
 
       <main>
-        <Loader></Loader> 
-        <Streak streak="1"/>
+        <Loader></Loader>
+        <Streak streak="1" />
         <Template>
-          <HomeComp/>
+          <HomeComp />
         </Template>
       </main>
     </div>
-  )
+  );
 }
-
-

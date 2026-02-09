@@ -1,51 +1,54 @@
-import { useState, useEffect } from 'react'
-import { auth } from './FirebaseConfig';
+import { useState, useEffect } from "react";
+import {
+  onAuthStateChanged,
+  signInWithEmailAndPassword as firebaseSignIn,
+  createUserWithEmailAndPassword as firebaseCreateUser,
+  signOut as firebaseSignOut,
+} from "firebase/auth";
+import { auth } from "./FirebaseConfig";
 
 const formatAuthUser = (user) => ({
-    uid: user.uid,
-    email: user.email
+  uid: user.uid,
+  email: user.email,
 });
 
 const useFirebaseAuth = () => {
-    const [authUser, setAuthUser] = useState(null);
-    const [loading, setLoading] = useState(true);
-    const clear = () => {
-        setAuthUser(null);
-        setLoading(true);
-    };
+  const [authUser, setAuthUser] = useState(null);
+  const [loading, setLoading] = useState(true);
 
-    const signInWithEmailAndPassword = (email, password) => auth.signInWithEmailAndPassword(email, password);
+  const authStateChanged = (user) => {
+    if (!user) {
+      setAuthUser(null);
+      setLoading(false);
+      return;
+    }
 
-    const createUserWithEmailAndPassword = (email, password) => auth.createUserWithEmailAndPassword(email, password);
+    setLoading(true);
+    setAuthUser(formatAuthUser(user));
+    setLoading(false);
+  };
 
-    const signOut = () => auth.signOut().then(clear);
+  const signInWithEmailAndPassword = (email, password) =>
+    firebaseSignIn(auth, email, password);
 
-    const authStateChanged = async (authState) => {
-        if (!authState) {
-            setAuthUser(null)
-            setLoading(false)
-            return;
-        }
+  const createUserWithEmailAndPassword = (email, password) =>
+    firebaseCreateUser(auth, email, password);
 
-        setLoading(true)
-        const formattedUser = formatAuthUser(authState);
-        setAuthUser(formattedUser);
-        setLoading(false);
-    };
+  const signOut = () => firebaseSignOut(auth).then(() => setAuthUser(null));
 
-// listen for Firebase state change
-    useEffect(() => {
-        const unsubscribe = auth.onAuthStateChanged(authStateChanged);
-        return () => unsubscribe();
-    }, []);
+  // Listen for Firebase state change
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, authStateChanged);
+    return () => unsubscribe();
+  }, []);
 
-    return {
-        authUser,
-        loading,
-        signInWithEmailAndPassword,
-        createUserWithEmailAndPassword,
-        signOut
-    };
-}
+  return {
+    authUser,
+    loading,
+    signInWithEmailAndPassword,
+    createUserWithEmailAndPassword,
+    signOut,
+  };
+};
 
 export default useFirebaseAuth;
